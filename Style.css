@@ -1,0 +1,7616 @@
+/* Style: XmpGreen */
+
+
+/* Resets */
+
+div,
+header,
+nav,
+ul,
+li,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/* for new elements in old browsers */
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+
+/*
+    Document Level styles
+*/
+
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.Title {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 0px;
+    font-weight: bold;
+    height: 35px;
+}
+
+input[type="checkbox"] {
+    bottom: 2px;
+    margin-left: 0;
+    margin-right: 4px;
+    padding-left: 0;
+    position: relative;
+    vertical-align: middle;
+}
+
+.GridButton {
+    border-bottom-color: #666666;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #ffffff;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #666666;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #ffffff;
+    border-top-style: solid;
+    border-top-width: 1px;
+    color: #000000;
+    font-size: 10px;
+    font-weight: normal;
+    height: 20px;
+}
+
+.toolTipDebuger {
+    background-color: whitesmoke;
+    border-bottom-color: lightgrey;
+    border-bottom-style: groove;
+    border-left-color: lightgrey;
+    border-left-style: groove;
+    border-right-color: lightgrey;
+    border-right-style: groove;
+    border-top-color: lightgrey;
+    border-top-style: groove;
+    font-size: 15px;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    top: 0;
+}
+
+.LineBelow {
+    background-color: #990000;
+}
+
+.ErrorText {
+    color: red;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.validationSummary {
+    margin-bottom: 10px;
+}
+
+#cssmenu {
+    position: relative;
+    height: 44px;
+    background: #282828;
+    width: auto;
+}
+
+#cssmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+#cssmenu > ul {
+    position: relative;
+    display: block;
+    background: #282828;
+    width: 100%;
+    z-index: 500;
+}
+
+#cssmenu:after,
+#cssmenu > ul:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+#cssmenu.align-right > ul > li {
+    float: right;
+}
+
+#cssmenu.align-center ul {
+    text-align: center;
+}
+
+#cssmenu.align-center ul ul {
+    text-align: left;
+}
+
+#cssmenu > ul > li {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#cssmenu > ul > #menu-button {
+    display: none;
+}
+
+#cssmenu ul li a {
+    display: block;
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+#cssmenu > ul > li > a {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 20px;
+    color: #7a8189;
+    text-transform: uppercase;
+    -webkit-transition: color 0.25s ease-out;
+    -moz-transition: color 0.25s ease-out;
+    -ms-transition: color 0.25s ease-out;
+    -o-transition: color 0.25s ease-out;
+    transition: color 0.25s ease-out;
+}
+
+#cssmenu > ul > li.has-sub > a {
+    padding-right: 32px;
+}
+
+#cssmenu > ul > li:hover > a {
+    color: #ffffff;
+}
+
+#cssmenu li.has-sub::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+#cssmenu > ul > li.has-sub::after {
+    right: 10px;
+    top: 20px;
+    border: 5px solid transparent;
+    border-top-color: #7a8189;
+}
+
+#cssmenu > ul > li:hover::after {
+    border-top-color: #ffffff;
+}
+
+#indicatorContainer {
+    position: absolute;
+    height: 12px;
+    width: 100%;
+    bottom: 0px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#pIndicator {
+    position: absolute;
+    height: 0;
+    width: 100%;
+    border: 12px solid transparent;
+    border-top-color: #2b2f3a;
+    z-index: -2;
+    -webkit-transition: left .25s ease;
+    -moz-transition: left .25s ease;
+    -ms-transition: left .25s ease;
+    -o-transition: left .25s ease;
+    transition: left .25s ease;
+}
+
+#cIndicator {
+    position: absolute;
+    height: 0;
+    width: 100%;
+    border: 12px solid transparent;
+    border-top-color: #2b2f3a;
+    top: -12px;
+    right: 100%;
+    z-index: -2;
+}
+
+#cssmenu ul ul {
+    position: absolute;
+    left: -9999px;
+    top: 70px;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease, top .25s ease;
+    -moz-transition: opacity .3s ease, top .25s ease;
+    -ms-transition: opacity .3s ease, top .25s ease;
+    -o-transition: opacity .3s ease, top .25s ease;
+    transition: opacity .3s ease, top .25s ease;
+    z-index: 1000;
+}
+
+#cssmenu ul ul ul {
+    top: 37px;
+    padding-left: 5px;
+}
+
+#cssmenu ul ul li {
+    position: relative;
+}
+
+#cssmenu > ul > li:hover > ul {
+    left: auto;
+    top: 44px;
+    opacity: 1;
+}
+
+#cssmenu.align-right > ul > li:hover > ul {
+    left: auto;
+    right: 0;
+    opacity: 1;
+}
+
+#cssmenu ul ul li:hover > ul {
+    left: 170px;
+    top: 0;
+    opacity: 1;
+}
+
+#cssmenu.align-right ul ul li:hover > ul {
+    left: auto;
+    right: 170px;
+    top: 0;
+    opacity: 1;
+    padding-right: 5px;
+}
+
+#cssmenu ul ul li a {
+    width: 130px;
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px 20px;
+    font-size: 12px;
+    color: #9ea2a5;
+    background: #ffffff;
+    -webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -ms-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+}
+
+#cssmenu.align-right ul ul li a {
+    text-align: right;
+}
+
+#cssmenu ul ul li:hover > a {
+    background: #f2f2f2;
+    color: #8c9195;
+}
+
+#cssmenu ul ul li:last-child > a,
+#cssmenu ul ul li.last > a {
+    border-bottom: 0;
+}
+
+#cssmenu > ul > li > ul::after {
+    content: '';
+    border: 6px solid transparent;
+    width: 0;
+    height: 0;
+    border-bottom-color: #ffffff;
+    position: absolute;
+    top: -12px;
+    left: 30px;
+}
+
+#cssmenu.align-right > ul > li > ul::after {
+    left: auto;
+    right: 30px;
+}
+
+#cssmenu ul ul li.has-sub::after {
+    border: 4px solid transparent;
+    border-left-color: #9ea2a5;
+    right: 10px;
+    top: 12px;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transition: -webkit-transform 0.2s ease, right 0.2s ease;
+}
+
+#cssmenu.align-right ul ul li.has-sub::after {
+    border-left-color: transparent;
+    border-right-color: #9ea2a5;
+    right: auto;
+    left: 10px;
+}
+
+#cssmenu ul ul li.has-sub:hover::after {
+    border-left-color: #ffffff;
+    right: -5px;
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+#cssmenu.align-right ul ul li.has-sub:hover::after {
+    border-right-color: #ffffff;
+    border-left-color: transparent;
+    left: -5px;
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+@media all and (max-width: 800px),
+only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px),
+only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px),
+only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px),
+only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px),
+only screen and (min-resolution: 192dpi) and (max-width: 1024px),
+only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+    #cssmenu {
+        width: auto;
+    }
+    #cssmenu.align-center ul {
+        text-align: left;
+    }
+    #cssmenu.align-right > ul > li {
+        float: none;
+    }
+    #cssmenu ul {
+        width: auto;
+    }
+    #cssmenu .submenuArrow,
+    #cssmenu #indicatorContainer {
+        display: none;
+    }
+    #cssmenu > ul {
+        height: auto;
+        display: block;
+    }
+    #cssmenu > ul > li {
+        float: none;
+    }
+    #cssmenu li,
+    #cssmenu > ul > li {
+        display: none;
+    }
+    #cssmenu ul ul,
+    #cssmenu ul ul ul,
+    #cssmenu ul > li:hover > ul,
+    #cssmenu ul ul > li:hover > ul,
+    #cssmenu.align-right ul ul,
+    #cssmenu.align-right ul ul ul,
+    #cssmenu.align-right ul > li:hover > ul,
+    #cssmenu.align-right ul ul > li:hover > ul {
+        position: relative;
+        left: auto;
+        top: auto;
+        opacity: 1;
+        padding-left: 0;
+        padding-right: 0;
+        right: auto;
+    }
+    #cssmenu ul .has-sub::after {
+        display: none;
+    }
+    #cssmenu ul li a {
+        padding: 12px 20px;
+    }
+    #cssmenu ul ul li a {
+        border: 0;
+        background: none;
+        width: auto;
+        padding: 8px 35px;
+    }
+    #cssmenu.align-right ul ul li a {
+        text-align: left;
+    }
+    #cssmenu ul ul li:hover > a {
+        background: none;
+        color: #8c9195;
+    }
+    #cssmenu ul ul ul a {
+        padding: 8px 50px;
+    }
+    #cssmenu ul ul ul ul a {
+        padding: 8px 65px;
+    }
+    #cssmenu ul ul ul ul ul a {
+        padding: 8px 80px;
+    }
+    #cssmenu ul ul ul ul ul ul a {
+        padding: 8px 95px;
+    }
+    #cssmenu > ul > #menu-button {
+        display: block;
+        cursor: pointer;
+    }
+    #cssmenu #menu-button > a {
+        padding: 14px 20px;
+    }
+    #cssmenu ul.open li,
+    #cssmenu > ul.open > li {
+        display: block;
+    }
+    #cssmenu > ul.open > li#menu-button > a {
+        color: #fff;
+        border-bottom: 1px solid rgba(150, 150, 150, 0.1);
+    }
+    #cssmenu ul ul::after {
+        display: none;
+    }
+    #cssmenu #menu-button::after {
+        display: block;
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 22px;
+        border-top: 2px solid #7a8189;
+        border-bottom: 2px solid #7a8189;
+        right: 20px;
+        top: 15px;
+    }
+    #cssmenu #menu-button::before {
+        display: block;
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 22px;
+        border-top: 2px solid #7a8189;
+        right: 20px;
+        top: 25px;
+    }
+    #cssmenu ul.open #menu-button::after,
+    #cssmenu ul.open #menu-button::before {
+        border-color: #fff;
+    }
+}
+
+.SelectedAsset {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #999966;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #00ffff;
+    border-bottom-width: 10px;
+    border-left-color: #00ffff;
+    border-left-width: 10px;
+    border-right-color: #00ffff;
+    border-right-width: 10px;
+    border-top-color: #00ffff;
+    border-top-width: 10px;
+}
+
+.UnselectedAsset {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #555d9c;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #00ffff;
+    border-bottom-width: 10px;
+    border-left-color: #00ffff;
+    border-left-width: 10px;
+    border-right-color: #00ffff;
+    border-right-width: 10px;
+    border-top-color: #00ffff;
+    border-top-width: 10px;
+}
+
+.PriceListRangeCell {
+    width: 200px;
+}
+
+A.StepUnselected,
+A.StepUnselected:link,
+A.StepUnselected:visited {
+    background-color: #999966;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    padding-left: 10px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+A.StepUnselected:hover {
+    background-color: #ffffff;
+    color: #999966;
+    padding-left: 10px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+
+A.StepSelected {
+    background-color: #999966;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    padding-left: 10px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+A.StepSelected:hover {
+    background-color: #999966;
+    color: white;
+    padding-left: 10px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+.Normal {
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 12px;
+}
+
+.NormalDouble {
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.NormalTextBox {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.NormalSelect {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.EditTextBox {
+    border-bottom-color: #999966;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #999966;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #999966;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #999966;
+    border-top-style: solid;
+    border-top-width: 1px;
+    font-size: 1em;
+    font-weight: normal;
+    width: 100%;
+}
+
+.NormalControl {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.NormalCheckBox {
+    font-size: 11px;
+    font-weight: normal;
+    margin-left: -4px;
+}
+
+.NormalRadio {
+    font-size: 11px;
+    font-weight: normal;
+    text-indent: -5px;
+}
+
+.NormalButton {
+    background-color: #ccccaa;
+    font-size: 11px;
+    font-weight: normal;
+    text-indent: -5px;
+}
+
+.NormalRed {
+    color: red;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.NormalBold {
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 12px;
+}
+
+.NormalItalic {
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+HR {
+    height: 1pt;
+    text-align: left;
+}
+
+.options {
+    color: #003399;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.HideControl {
+    display: none;
+}
+
+.InfoPopup {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    border-bottom-color: #cccccc;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #cccccc;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #cccccc;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #cccccc;
+    border-top-style: solid;
+    border-top-width: 1px;
+    display: none;
+    font-size: 11px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 7px;
+    position: absolute;
+    white-space: normal !important;
+    width: 300px;
+    z-index: 9;
+}
+
+.OrderPriceLabelWidth {
+    width: 500px;
+}
+
+.Spacer5 {
+    display: inline-block;
+    width: 5px;
+}
+
+.Spacer10 {
+    display: inline-block;
+    width: 10px;
+}
+
+.Spacer20 {
+    display: inline-block;
+    width: 20px;
+}
+
+.TableNoBorders,
+.TableNoBorders TD {
+    -moz-border-bottom-colors: none !important;
+    -moz-border-left-colors: none !important;
+    -moz-border-right-colors: none !important;
+    -moz-border-top-colors: none !important;
+    border-bottom-color: -moz-use-text-color !important;
+    border-bottom-style: none !important;
+    border-bottom-width: 0 !important;
+    border-image-outset: 0 0 0 0 !important;
+    border-image-repeat: stretch stretch !important;
+    border-image-slice: 100% 100% 100% 100% !important;
+    border-image-source: none !important;
+    border-image-width: 1 1 1 1 !important;
+    border-left-color: -moz-use-text-color !important;
+    border-left-style: none !important;
+    border-left-width: 0 !important;
+    border-right-color: -moz-use-text-color !important;
+    border-right-style: none !important;
+    border-right-width: 0 !important;
+    border-top-color: -moz-use-text-color !important;
+    border-top-style: none !important;
+    border-top-width: 0 !important;
+}
+
+.TableNoBordersOverride,
+.TableNoBordersOverride TABLE,
+.TableNoBordersOverride TD,
+.TableNoBordersOverride DIV {
+    -moz-border-bottom-colors: none !important;
+    -moz-border-left-colors: none !important;
+    -moz-border-right-colors: none !important;
+    -moz-border-top-colors: none !important;
+    border-bottom-color: -moz-use-text-color !important;
+    border-bottom-style: none !important;
+    border-bottom-width: 0 !important;
+    border-image-outset: 0 0 0 0 !important;
+    border-image-repeat: stretch stretch !important;
+    border-image-slice: 100% 100% 100% 100% !important;
+    border-image-source: none !important;
+    border-image-width: 1 1 1 1 !important;
+    border-left-color: -moz-use-text-color !important;
+    border-left-style: none !important;
+    border-left-width: 0 !important;
+    border-right-color: -moz-use-text-color !important;
+    border-right-style: none !important;
+    border-right-width: 0 !important;
+    border-top-color: -moz-use-text-color !important;
+    border-top-style: none !important;
+    border-top-width: 0 !important;
+}
+
+.XmpTooltipPopup {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffe0;
+    border-bottom-color: #cccccc;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #cccccc;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #cccccc;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #cccccc;
+    border-top-style: solid;
+    border-top-width: 1px;
+    display: none;
+    font-size: 11px;
+    font-weight: normal;
+    max-width: 500px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    position: absolute;
+    white-space: normal !important;
+    width: auto;
+    z-index: 10;
+}
+
+.priceExplainTooltip {
+    margin-left: 5px;
+}
+
+.ulNoStyle {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.ulNoStyle li {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+}
+
+.MoreInfoLabel {
+    color: #333370;
+    cursor: default;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+
+.RLPrevious {
+    width: 100%;
+}
+
+.nopadding,
+.nopadding TD {
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+}
+
+.ClearingGatewayMessage {
+    display: block;
+    white-space: normal;
+}
+
+.RequiredFieldMarker {
+    color: Red;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+ul.horizontalList {
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+ul.horizontalList li {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+div.XmpImageDropDownList {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: transparent;
+    background-image: url("/uStore/Images/OpenMenu.png");
+    background-repeat: no-repeat;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: transparent;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: transparent;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: transparent;
+    border-top-style: solid;
+    border-top-width: 1px;
+    z-index: inherit;
+}
+
+div.XmpImageDropDownList:hover {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #b0b0b0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #b0b0b0;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #b0b0b0;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #b0b0b0;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+div.XmpImageDropDownList ul {
+    z-index: inherit;
+}
+
+div.XmpImageDropDownList li,
+div.XmpImageDropDownList a.toggler {
+    background-color: white;
+    background-repeat: no-repeat;
+    border-top-color: #d0d0d0;
+    border-top-style: solid;
+    border-top-width: 1px;
+    color: #7395d3;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    z-index: inherit;
+}
+
+div.XmpImageDropDownList a.toggler,
+div.XmpImageDropDownList a.toggler:hover {
+    background-color: transparent;
+}
+
+div.XmpImageDropDownList li:hover {
+    background-color: #e8e8e8;
+    z-index: inherit;
+}
+
+div.XmpImageDropDownList ul.choices {
+    display: none;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    z-index: inherit;
+}
+
+div.XmpImageDropDownList ul.choices li {
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    z-index: inherit;
+}
+
+.userWelcome {
+    background-color: transparent;
+    border-width: 0;
+    float: right;
+    height: auto;
+    left: 630px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: right;
+    top: 41px;
+    width: 322px;
+    z-index: 2;
+}
+
+.userWelcome span {
+    font-size: 25px;
+    height: 31px;
+    line-height: 37px;
+    text-align: right;
+    width: 321px;
+}
+
+.flagList {
+    float: right;
+    height: 36px;
+    margin-top: 7px;
+    padding-right: 5px;
+    position: relative;
+    text-align: right;
+    z-index: 1001;
+}
+
+div.flagList div.XmpImageDropDownList {
+    background-position: 28px 8px;
+    width: 40px;
+    z-index: inherit;
+}
+
+div.flagList div.XmpImageDropDownList li,
+div.flagList div.XmpImageDropDownList a.toggler {
+    background-position: 4px center;
+    background-repeat: no-repeat;
+    height: 20px;
+    padding-left: 20px;
+    padding-right: 12px;
+    width: 8px;
+    z-index: inherit;
+}
+
+.inlineFlags {
+    display: inline;
+    line-height: 23px;
+}
+
+@media not all {
+    .inlineFlags {
+        display: inline-block;
+        margin-top: 6px;
+    }
+}
+
+div.dropDownCurrencies {
+    float: right;
+    height: 36px;
+    margin-right: 4px;
+    margin-top: 7px;
+    position: relative;
+    text-align: left;
+    width: 47px;
+    z-index: 1001;
+}
+
+div.dropDownCurrencies div.XmpImageDropDownList {
+    background-position: 31px 8px;
+}
+
+div.dropDownCurrencies li,
+div.dropDownCurrencies a.toggler {
+    background-color: white;
+    border-top-color: #d0d0d0;
+    border-top-style: solid;
+    border-top-width: 1px;
+    color: #7395d3;
+    display: inline-block;
+    height: 20px;
+    padding-left: 3px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    width: 40px;
+    z-index: inherit;
+}
+
+div.dropDownCurrencies a.toggler,
+div.dropDownCurrencies a.toggler:hover {
+    background-color: transparent;
+}
+
+.CheckoutCompleteOrderNumber {
+    color: Red;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+ul.horizontalList {
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+ul.horizontalList li {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.addressPaneTitle {
+    float: left;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.addressPaneAddAddress {
+    float: right;
+    padding-right: 43px;
+}
+
+.addressListWrapper {
+    height: auto;
+    max-height: 300px;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    width: 96%;
+}
+
+.addressListTable {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-collapse: collapse;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: 0;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: 0;
+    border-spacing: 0;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 0;
+    max-width: 100%;
+    table-layout: fixed;
+    text-align: left;
+}
+
+.addressListTable TD {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-align: left;
+}
+
+.addressItemTable {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #cccccc;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-collapse: collapse;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #cccccc;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #cccccc;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-spacing: 0;
+    border-top-color: #cccccc;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-bottom: 3px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 3px;
+    table-layout: fixed;
+    text-align: left;
+    width: 260px;
+}
+
+.addressItemHead {
+    border-bottom-color: #cccccc;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    font-size: 11px;
+    font-weight: bold;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.addressItemHead > div {
+    padding-bottom: 0;
+    padding-left: 5px;
+    padding-right: 0;
+    padding-top: 3px;
+    white-space: nowrap;
+}
+
+.addressItemHead .personName {
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.addressItemHead .tooltip {
+    display: inline-block;
+    height: 24px;
+    vertical-align: middle;
+    width: 24px;
+}
+
+.addressItemTitle {
+    float: left;
+}
+
+.addressItemHead .buttons {
+    float: right;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 5px;
+    padding-top: 3px;
+    text-align: right;
+    width: 48px;
+}
+
+.addressItemBody {
+    background-color: #ffffff;
+    font-size: 11px;
+    font-weight: normal;
+    height: 100px;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+    vertical-align: top;
+}
+
+.addressItemBody li {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 2px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 2px;
+    white-space: nowrap;
+}
+
+.paneSeparator {
+    border-top-color: #cccccc;
+    border-top-style: solid;
+    border-top-width: 2px;
+    clear: both;
+    height: 2px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 5px;
+    margin-top: 15px;
+}
+
+#tblAddressEdit input[type="text"] {
+    width: 260px;
+}
+
+#tblAddressEdit select {
+    width: 266px;
+}
+
+div.productList,
+table.productList {
+    margin-top: 10px;
+}
+
+div.productListTable {
+    position: relative;
+}
+
+div.productListTable .thumbnail {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #e9e9e9;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #e9e9e9;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #e9e9e9;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #e9e9e9;
+    border-top-style: solid;
+    border-top-width: 1px;
+    height: 130px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    position: relative;
+    width: 210px;
+}
+
+div.productListTable.SoldOut div[class*="thumbnail"] {}
+
+div.productListTable.SoldOut .divSoldOut {
+    background-image: url("/uStore/Images/SoldOut_big.png");
+    color: White;
+    cursor: default;
+    display: inline !important;
+    font-size: 12px;
+    height: 29px;
+    line-height: 2.4em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 85px;
+    width: 109px;
+    z-index: 1000;
+}
+
+div.productListTable div.productDetailsLink table {
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+div.productListTable a,
+div.productListTable a img {
+    display: block;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+div.productListTable a img {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #e9e9e9;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #e9e9e9;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #e9e9e9;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #e9e9e9;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+div.productListTable .OutOfStock {
+    color: Red;
+}
+
+div.productListTable .OutOfStockChoices {
+    color: Red;
+}
+
+div.productListTable .InStock {}
+
+div.productListTable .StockLevel {}
+
+.page-selection {
+    display: block;
+    min-height: 1px;
+}
+
+div.productlistview {
+    margin-bottom: 15px;
+    width: 797px;
+}
+
+div.productlistview .thumbnail {
+    float: left;
+}
+
+.productlistview div.productInfo {
+    float: left;
+    min-height: 144px;
+    position: relative;
+    width: 330px;
+}
+
+div.productlistview div.productname,
+div.productlistview div.productdesc,
+div.productlistview div.productQtyRange {
+    padding-left: 10px;
+    text-align: left;
+    width: 355px;
+}
+
+div.productlistview div.productname {
+    line-height: 1.5em;
+    margin-top: 5px;
+    padding-top: 10px;
+}
+
+div.productlistview div.productdesc {
+    margin-bottom: 45px;
+    margin-top: 10px;
+}
+
+div.productlistview div.productQtyRange {
+    bottom: 15px;
+    left: 0;
+    line-height: 15px;
+    position: absolute;
+}
+
+div.productlistview div.pricingInfo {
+    float: right;
+    margin-top: 60px;
+    width: 180px;
+    margin-right: 25px;
+}
+
+div.productlistview div.productPrice,
+div.productlistview div.productDetailsLink {
+    text-align: center;
+}
+
+div.productlistview div.InventoryInfo {
+    bottom: 0;
+    left: 0;
+    line-height: 15px;
+    margin-left: 10px;
+    position: absolute;
+    white-space: nowrap;
+}
+
+div.productgridview {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #e9e9e9;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #e9e9e9;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #e9e9e9;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #e9e9e9;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    width: 220px;
+}
+
+.productgridview div.productname,
+.productgridview div.productdesc,
+.productgridview div.productQtyRange,
+.productgridview div.productPrice,
+.productgridview div.productDetailsLink {
+    width: 210px;
+}
+
+.productgridview div.productname {
+    margin-top: 10px;
+}
+
+.productgridview div.productdesc {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.productgridview div.productQtyRange {
+    display: block;
+    padding-bottom: 5px;
+}
+
+.productgridview .productunits {
+    margin-bottom: 0;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 0;
+    width: 100%;
+}
+
+.productgridview div.productPrice,
+.productgridview div.productDetailsLink {
+    text-align: center;
+}
+
+.productgridview div.productPrice {
+    display: block;
+    padding-bottom: 5px;
+}
+
+div.productListTable .overlay {
+    display: none;
+    font-size: 9px;
+    height: 25px;
+    left: 0;
+    line-height: 1.5em;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+div.productListTable .overlay div {
+    height: 100%;
+    position: absolute;
+    width: 109px;
+}
+
+div.productListTable .productEnlarge {
+    left: 0;
+    top: 0;
+}
+
+div.productListTable .productDownload {
+    right: 0;
+    top: 0;
+}
+
+div.productListTable .overlay div a {
+    height: 100%;
+    padding-left: 20px;
+    padding-top: 6px;
+    width: 89px;
+}
+
+div.productListTable div.overlay div {
+    background-color: #e9e9e9;
+}
+
+div.productListTable .productDownload {
+    border-left-color: #d5d5d5;
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+
+div.productListTable .productEnlarge a {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("/uStore/Images/magnifying_glass_high.png");
+    background-origin: padding-box;
+    background-position: 5px 50%;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+}
+
+div.productListTable .productDownload a {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("/uStore/Images/download.png");
+    background-origin: padding-box;
+    background-position: 3px 50%;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+}
+
+.productListTable .overlay .productEnlarge:hover a {
+    background-image: url("/uStore/Images/magnifying_glass_rol_high.png");
+}
+
+.productListTable .overlay .productDownload:hover a {
+    background-image: url("/uStore/Images/download_rol.png");
+}
+
+.leftHeader {
+    text-align: left;
+}
+
+.ShoppingCartGrid_Column_Buttons {
+    text-align: center;
+    width: 40px;
+}
+
+.ShoppingCartGrid_Column_Thumbnail {
+    text-align: center;
+    width: 82px;
+}
+
+.ShoppingCartGrid_Column_NotificationIcon {
+    text-align: center;
+    width: 24px;
+}
+
+.ShoppingCartGrid_Column_ProductName {
+    text-align: left;
+    width: 220px;
+}
+
+.ShoppingCartGrid_Column_Units {
+    text-align: left;
+    width: 180px;
+}
+
+.ShoppingCartGrid_Column_Reject {
+    text-align: left;
+    width: 120px;
+}
+
+.ShoppingCartGrid_Column_Price {
+    text-align: right;
+    white-space: nowrap;
+    width: 1%;
+}
+
+.ShoppingCartGrid_Column_Currency {
+    text-align: right;
+    white-space: nowrap;
+    width: 1%;
+}
+
+.ShoppingCartGrid_Column_Price div.ShoppingCartPriceTD,
+.ShoppingCartGrid_Column_Currency div.ShoppingCartPriceTD {
+    width: 80%;
+}
+
+.Duc::after,
+.floatClearing::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+* html .Duc,
+* html .floatClearing {
+    height: 1%;
+}
+
+:first-child + html .Duc,
+*:first-child + html .floatClearing {
+    min-height: 1px;
+}
+
+.subTitleProductNameExists {
+    display: none;
+}
+
+.WizardButtonsContainer div {
+    float: left;
+    margin-right: 12px;
+}
+
+div.SaveDraftButtonContainer {
+    float: right;
+}
+
+.WizardButtonsContainer {
+    border-top-color: #999999;
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding-top: 4px;
+}
+
+#nav {
+    margin-left: 3px;
+}
+
+#SlideShow {
+    position: relative;
+    text-align: center;
+    visibility: hidden;
+}
+
+.CustomizationProperties {}
+
+.CustomizationProperties #customization {
+    float: left;
+    width: 55%;
+}
+
+.CustomizationProperties #preview {
+    float: right;
+}
+
+.OrderFinalStepProperties {
+    white-space: normal;
+}
+
+.Duc {
+    display: block;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.Duc ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.Duc dl {
+    clear: both;
+}
+
+.Duc dt,
+.Duc dd {
+    float: left;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.ducTitle {
+    padding-bottom: 5px;
+}
+
+.Duc input[type="checkbox"] {
+    margin-left: 2px;
+}
+
+.FieldOptionItem:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+.FieldOptionItem.FOList {
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    border-bottom-color: #d0d0d0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    min-height: 30px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    width: 100%;
+}
+
+.FieldOptionItem.FOList:first-child {
+    border-top-color: #d0d0d0;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.FieldOptionItem.FOList > div {
+    padding-left: 65px;
+}
+
+.FieldOptionItem.FOList:last-child {
+    border-bottom-color: #d0d0d0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.FieldOptionItem.FOList.selected {
+    background-color: #ececec;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: medium;
+    color: #000000;
+}
+
+.FOGridWrapper {
+    float: left;
+}
+
+.FieldOptionItem.FOGrid .optionTitle {
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    width: 100px;
+}
+
+.FieldOptionItem .optionTitle {
+    font-weight: bold;
+    padding-top: 7px;
+}
+
+.FieldOptionItem.FOGrid.selected .optionTitle {
+    color: grey;
+    font-weight: bold;
+    padding-top: 7px;
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    width: 100px;
+}
+
+.FieldOptionItem.FOGrid {
+    float: left;
+    height: 85px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    position: relative;
+    text-align: center;
+    width: 100px;
+}
+
+.FieldOptionItem.selected + .FieldOptionItem {
+    border-top-width: 0;
+}
+
+.FieldOptionItem.FOGrid .optionIcon {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-bottom-color: grey;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: grey;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: grey;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: grey;
+    border-top-style: solid;
+    border-top-width: 1px;
+    height: 45px;
+    left: 17px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    position: absolute;
+    width: 66px;
+}
+
+.FieldOptionItem.selected.FOGrid .optionIcon {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: grey;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: grey;
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-right-color: grey;
+    border-right-style: solid;
+    border-right-width: 3px;
+    border-top-color: grey;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-style: solid;
+    border-top-width: 3px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.FieldOptionItem.selected.FOGrid + .FieldOptionItem {
+    border-top-width: 1px;
+}
+
+.dependentDUC {
+    display: none;
+}
+
+.dtiName,
+.dmiName,
+.dddlName {
+    width: 190px;
+}
+
+.drbName {
+    width: 182px;
+}
+
+.drbValue li {
+    line-height: 1.5em;
+    margin-left: 5px;
+}
+
+.dtiStringTextBox {
+    width: 214px;
+}
+
+.dddlValue select {
+    width: 220px;
+}
+
+.OrderFinalStepContent .ui-dialog-titlebar {
+    display: none;
+}
+
+.WizardStepsNavControl .hide {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: 0;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: 0;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 0;
+    height: 0;
+    width: 0;
+}
+
+#tdDialSummary.DialSummaryControl UL {
+    white-space: normal;
+    width: 93%;
+}
+
+.ShowMessagePage .Headbg {
+    background-color: #cfd8e0;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+}
+
+.ShoppingCartControl .productName,
+.ShoppingCartControl .editProduct {
+    float: left;
+}
+
+.ShoppingCartControl .productName {
+    font-weight: bold;
+    margin-bottom: 2px;
+    padding-right: 5px;
+}
+
+.ShoppingCartControl .editProduct a {
+    color: white;
+    font-size: 10px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+
+.ShoppingCartControl .emptyCartButtons {
+    padding-bottom: 18px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 18px;
+}
+
+.ShoppingCartControl .emptyCartButtons {
+    padding-bottom: 18px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 18px;
+}
+
+.ShoppingCartControl .modifyOrderRow {
+    height: 30px;
+    vertical-align: top;
+}
+
+.ShoppingCartControl .modifyingOrder {
+    padding-right: 5px;
+}
+
+.ShoppingCartControl .inventoryStatus {
+    color: Red;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.ShoppingCartControl .SoldOut div[class*="thumbnail"] {}
+
+.ShoppingCartControl .thumbnailWrapper {
+    position: relative;
+}
+
+.ShoppingCartControl .thumbnailWrapper #thumbnailBorder {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    border-bottom-color: #cccccc;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #cccccc;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #cccccc;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #cccccc;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.ShoppingCartControl .SoldOut .divSoldOut {
+    background-image: url("/uStore/Images/SoldOut_small.png");
+    color: White;
+    display: inline !important;
+    font-size: 12px;
+    height: 19px;
+    line-height: 1.7em;
+    position: absolute;
+    right: 10px;
+    top: 46px;
+    width: 70px;
+    z-index: 1000;
+}
+
+.ie .ShoppingCartControl .SoldOut .divSoldOut {
+    line-height: 1.5em;
+}
+
+ul.CheckOutPage {
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+ul.CheckOutPage li.cartSummary ul {
+    float: right;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+ul.CheckOutPage li.cartSummary ul dt,
+ul.CheckOutPage li.cartSummary ul dd {
+    display: inline-block;
+}
+
+* + html ul.CheckOutPage li.cartSummary ul dt,
+* + html ul.CheckOutPage li.cartSummary ul dd {
+    display: block;
+    float: left;
+}
+
+ul.CheckOutPage li.cartSummary ul dt {
+    clear: both;
+    float: left;
+    padding-left: 15px;
+    padding-right: 30px;
+}
+
+ul.CheckOutPage li.cartSummary ul dd {
+    float: right;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+ul.CheckOutPage li.cartSummary ul dd span {
+    display: block;
+}
+
+.CheckOutPage .SecondaryCurrency {
+    min-width: 130px;
+}
+
+.ShoppingCartSecondaryCurrencyLabel {
+    clear: right;
+    float: right;
+}
+
+.CheckOutPage .cartSummary dl {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: 0;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: 0;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.CheckOutPage #CurrentCartSummary {
+    height: 190px;
+}
+
+ul.CheckOutPage li.cartSummary div.totals tr {
+    padding-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0;
+}
+
+.buttonContainer {
+    float: left;
+    padding-left: 5px;
+}
+
+.buttonsContainer {
+    float: right;
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 12px;
+}
+
+.CheckOutPage .cartSummary .aboveTop {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #cccccc;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #cccccc;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #cccccc;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    height: 15px;
+}
+
+.CheckOutPage .cartSummary .top {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #cccccc;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #cccccc;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #cccccc;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: medium;
+    margin-bottom: 0;
+    padding-bottom: 14px;
+}
+
+.CheckOutPage .cartSummary .middle {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #cccccc;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #cccccc;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #cccccc;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: medium;
+    height: 28px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 8px;
+}
+
+.CheckOutPage .cartSummary .bottom {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    border-bottom-color: #cccccc;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #cccccc;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #cccccc;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: medium;
+    height: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.ShoppingCartControl .divNickName {
+    clear: left;
+}
+
+.SaveForLater {
+    padding-bottom: 15px;
+}
+
+.KeywordsPanel {
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.mainAreaFooterFullWidth {
+    border-top-color: #999999;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.inlinePanel {
+    display: inline-block;
+}
+
+* + html .inlinePanel {
+    display: block;
+    float: left;
+}
+
+.productSearchBox {
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    display: inline-block;
+    margin-top: -8px;
+}
+
+.ie7 .productSearchBox {
+    display: block;
+    float: right;
+}
+
+.productSearchBox input[type="text"] {
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
+    height: 23px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    width: 120px;
+}
+
+.productSearchBox input[type="submit"] {
+    background-color: black;
+    background-image: url("/uStore/Images/magnifying_glass_high.png");
+    background-position: 4px 4px;
+    background-repeat: no-repeat;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    cursor: pointer;
+    height: 23px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    width: 20px;
+}
+
+.productSearchBox > div {
+    float: left;
+}
+
+.noResultsLabel {
+    display: block;
+    padding-bottom: 0;
+    padding-left: 15px;
+    padding-right: 0;
+    padding-top: 10px;
+}
+
+#TdBottomLogo,
+#TdBottomMenu {}
+
+.checkoutFinalBack,
+.checkoutFinalCheckout,
+.productDetailsBack,
+.productDetailsContinue {
+    float: left;
+}
+
+.footnotes {
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+}
+
+.orderApprovalListBackButtonWrapper {
+    padding-top: 50px;
+}
+
+.popupContent {
+    bottom: 50px;
+    left: 0;
+    overflow-x: auto;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.popupFooter {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+.footerButtons {
+    float: right;
+    text-align: right;
+    width: 100%;
+}
+
+.footerButtons > table.XmpImageButton {
+    float: left;
+}
+
+.footerButtons > .XmpImageButton,
+.footerButtons > div > .XmpImageButton {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.dialCustomizationTable {
+    width: 100%;
+}
+
+.fileSubmissionCustomizationHeader {
+    padding-left: 10px;
+}
+
+.fileSubmissionDropFilesHere {
+    background-color: White;
+    border-spacing: 8px;
+    display: none;
+    font-size: 40px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 707px;
+    z-index: 100;
+}
+
+.fileSubmissionDropFilesHere .dropFileBorder {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: white;
+    border-bottom-color: #cfcfcf;
+    border-bottom-style: dashed;
+    border-bottom-width: 4px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #cfcfcf;
+    border-left-style: dashed;
+    border-left-width: 4px;
+    border-right-color: #cfcfcf;
+    border-right-style: dashed;
+    border-right-width: 4px;
+    border-top-color: #cfcfcf;
+    border-top-style: dashed;
+    border-top-width: 4px;
+    color: #cfcfcf;
+    display: table-cell;
+    opacity: 0.8;
+    text-align: center;
+    vertical-align: middle;
+    width: 670px;
+}
+
+.orderListTable {
+    width: 100%;
+}
+
+.orderListTable TD {
+    padding-bottom: 5px;
+}
+
+.orderListTable .paneSeparator {
+    margin-bottom: 0;
+    margin-left: -1px;
+    margin-right: -1px;
+    margin-top: 0;
+}
+
+#divSmpSearch .form-group {
+    display: inline;
+}
+
+#divSmpSearch #TxtOrderID {
+    width: 180px;
+}
+
+#divSmpSearch .SimpleSearchBtn {
+    display: inline-block;
+}
+
+.ChangeToAdvSrchContainer {
+    float: right;
+}
+
+#btnChangeToAdvSrch {
+    display: inline;
+}
+
+.orderListTable #tblAdvSearch {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.orderListTable #tblAdvSearch .captionColumn {
+    padding-bottom: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5px;
+    width: 180px;
+}
+
+.orderListTable #tblAdvSearch .contentColumn {
+    padding-bottom: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5px;
+    width: 335px;
+}
+
+.orderListTable #tblAdvSearch .searchButtonsColumn {
+    padding-bottom: 5px;
+    padding-left: 0;
+    padding-right: 15px;
+    padding-top: 5px;
+    text-align: right;
+}
+
+.orderListTable #tblAdvSearch .toSmpSearchColumn {
+    padding-bottom: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5px;
+    text-align: right;
+}
+
+.orderListTable #tblAdvSearch #TxtOrderID2 {
+    width: 325px;
+}
+
+.orderListTable #tblAdvSearch #DdlAddress {
+    width: 328px;
+}
+
+.orderListTable #tblAdvSearch #TxtProduct {
+    width: 325px;
+}
+
+.orderListTable #tblAdvSearch #DdlSearchFilter {
+    width: 328px;
+}
+
+.orderListTable #tblAdvSearch .datePicker {
+    width: 130px !important;
+}
+
+.orderDetailsPage {
+    width: 100%;
+}
+
+.OrderDetailsTdRounding {
+    padding-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0;
+    width: 300px;
+}
+
+.flippedDivHorizontal {
+    transform: scaleX(-1);
+}
+
+.flippedDivVertical {
+    transform: scaleY(-1);
+}
+
+#productDetailsContainer {
+    min-height: 440px;
+    width: 100%;
+}
+
+.ProductDescMain {
+    padding-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.productDetailsIndent {}
+
+td.ProductDetailsInventory {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 0;
+    padding-top: 10px;
+}
+
+td.ProductDetailsInventory .OutOfStock {
+    color: Red;
+}
+
+td.ProductDetailsInventory .OutOfStockChoices {
+    color: Red;
+}
+
+td.ProductDetailsInventory .InStock {}
+
+td.ProductDetailsInventory .StockLevel {}
+
+.WizardStepsNavControl {
+    border-bottom-color: #999999;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-bottom: 5px;
+}
+
+#productDetailsContainer .WizardStepsNavControl {
+    margin-bottom: 10px;
+}
+
+#ProgressBarDiv .WizardStepsNavControl {
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+}
+
+.WizStep,
+.WizStepSel {
+    display: block;
+}
+
+.WizardProgressStep {
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 15px;
+    padding-top: 0;
+}
+
+.checkoutSubmissionOrderPriceContainerContainer {
+    float: right;
+    margin-right: -16px;
+}
+
+.LivePersonButton_Skin {
+    bottom: 10px;
+    position: fixed;
+    right: 160px;
+    z-index: 100;
+}
+
+.singleSignOnButtonFacebook {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #6676ab;
+    background-image: url("/ustore/images/facebook-login-wide.gif");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    border-bottom-color: #24346f;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #32437f;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #32437f;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #32437f;
+    border-top-style: solid;
+    border-top-width: 1px;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    padding-bottom: 0;
+    padding-left: 28px;
+    padding-right: 8px;
+    padding-top: 0;
+    position: relative;
+    text-align: left;
+    width: 141px;
+}
+
+.singleSignOnButtonFacebook span {
+    -x-system-font: none;
+    color: white;
+    font-family: Verdana, Arial, sans-serif;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size: 11px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-weight: bold;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+#divPricingGridWrapper {
+    overflow-x: auto;
+    width: 930px;
+}
+
+.disabledLink {
+    color: #aaaaaa !important;
+    cursor: default;
+}
+
+.divloadingImgPrice {
+    background-color: black;
+    opacity: 0.2;
+    position: absolute;
+    width: 188px;
+}
+
+.loadingImgPrice {
+    left: 40%;
+    position: relative;
+    top: 30%;
+    z-index: 9999;
+}
+
+td.OrderFinalStepFinalStepInventory .OutOfStock {
+    color: Red;
+}
+
+td.OrderFinalStepFinalStepInventory .OutOfStockChoices {
+    color: Red;
+}
+
+td.OrderFinalStepFinalStepInventory .InStock {}
+
+td.OrderFinalStepFinalStepInventory .StockLevel {}
+
+.linkEditNickName {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("/uStore/Images/icon-edit.gif");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    cursor: pointer;
+    display: none;
+    height: 16px;
+    vertical-align: top;
+    width: 16px;
+}
+
+.divNickName .txtNickName {
+    display: none;
+    height: 15px;
+    width: 120px;
+}
+
+.divNickName *:hover {
+    cursor: pointer;
+}
+
+.CustomizationSteps span {
+    float: left;
+    margin-bottom: 3px;
+    padding-left: 0;
+}
+
+.PersonalInformation td {
+    padding-bottom: 7px;
+}
+
+.PersonalInformation #trChangePassword,
+.PersonalInformation #trEditInfo {
+    padding-bottom: 10px;
+}
+
+.PersonalInformation .TablesTitle {
+    padding-bottom: 10px;
+}
+
+.PersonalInformation TD.FormLabel {
+    padding-right: 20px;
+}
+
+.PersonalInformation #trChangePassword .FormField {
+    width: 209px;
+}
+
+.PersonalInformation #trEditInfo .FormField {
+    width: 260px;
+}
+
+.PersonalInformation #trEditInfo SELECT.FormField,
+.PersonalInformation #trEditInfo .RadInput .FormField {
+    width: 262px;
+}
+
+.PersonalInformation #chkOptIn {
+    margin-left: -3px;
+}
+
+.PersonalInformation #trRequiredField TD,
+.PersonalInformation #trOptIn TD {
+    height: 20px;
+}
+
+#upButton {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-image: url("/uStore/Images/FileSubmissionFileTypes/up.png");
+    background-repeat: no-repeat;
+    border-bottom-color: lightgray;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: lightgray;
+    border-left-style: dotted;
+    border-left-width: 1px;
+    border-right-color: lightgray;
+    border-right-style: dotted;
+    border-right-width: 1px;
+    border-top-color: lightgray;
+    border-top-style: dotted;
+    border-top-width: 1px;
+    cursor: pointer;
+    float: none;
+    height: 36px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    top: 0;
+    width: 738px;
+}
+
+#foldersContainer,
+#filesContainer {
+    cursor: pointer;
+}
+
+#foldersContainer .subfolderContainer,
+#filesContainer .fileContainer {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: lightgray;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: lightgray;
+    border-left-style: dotted;
+    border-left-width: 1px;
+    border-right-color: lightgray;
+    border-right-style: dotted;
+    border-right-width: 1px;
+    border-top-color: lightgray;
+    border-top-style: dotted;
+    border-top-width: 1px;
+    float: left;
+    height: 55px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    padding-left: 5px;
+    width: 237px;
+}
+
+#foldersContainer .subfolderIcon,
+#filesContainer .fileIcon {
+    display: table-cell;
+    height: 48px;
+    width: 48px;
+}
+
+#foldersContainer .subfolderName,
+#filesContainer .fileName {
+    display: table-cell;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+
+#foldersContainer .fileExtensionFolder {
+    background-image: url("/uStore/Images/FileSubmissionFileTypes/folder.png");
+}
+
+#filesContainer .fileExtensiondocx,
+#filesContainer .fileExtensiondoc {
+    background-image: url("/uStore/Images/FileSubmissionFileTypes/docx.png");
+}
+
+#filesContainer .fileExtensionpptx,
+#filesContainer .fileExtensionppt {
+    background-image: url("/uStore/Images/FileSubmissionFileTypes/pptx.png");
+}
+
+#filesContainer .fileExtensionpdf {
+    background-image: url("/uStore/Images/FileSubmissionFileTypes/PDF.png");
+}
+
+#selectedFileName,
+#fileSelected,
+#resetFolder {
+    display: none;
+}
+
+#tblPricingTable {
+    height: 100%;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+#UploadRLWrapper .form-group {
+    display: table-row;
+}
+
+#UploadRLWrapper .formLabel {
+    display: table-cell;
+    padding-bottom: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0;
+    text-align: left;
+}
+
+#UploadRLWrapper #txtListDescription {
+    width: 300px;
+}
+
+#UploadRLWrapper input[type="file"] {
+    height: 22px;
+    width: 390px;
+}
+
+#tblSignIn,
+#tblRegistration,
+#tblSocialSignIn {
+    margin-bottom: 12px;
+    margin-top: 20px;
+    width: 454px;
+}
+
+#tblRegistrationForm input[type="text"],
+#tblRegistration input[type="password"],
+#tblRegistration input[type="text"],
+#tblRegistration input[type="password"] {
+    width: 248px;
+}
+
+#divRegisterComplete table {
+    float: left;
+}
+
+#divRecipientListTitle,
+#divRecipientListButtons,
+#divRecipientListErrors {
+    padding-bottom: 10px;
+}
+
+#rlEditContainer .input {
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+#rlEditContainer input,
+#rlEditContainer label {
+    display: block;
+}
+
+.addressBoxWrapper .ddlAddresses {
+    width: 200px;
+}
+
+.CheckoutServices {
+    width: 230px;
+}
+
+.ShippingItemContainer {
+    float: left;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.CheckoutAddressHeading {
+    text-align: left;
+}
+
+#tblNumCopies #lblNumCopiesWrapper {
+    width: 190px;
+}
+
+#tblNumCopies input[type="text"] {
+    width: 85px;
+}
+
+#selectGlobalAddressWrapper #txtSearch {
+    width: 300px;
+}
+
+.tblPriceTagsWrapper td.FormLabel {
+    width: 180px;
+}
+
+#NumberOfCopiesPopup #lblNumCopiesWrapper {
+    width: 190px;
+}
+
+#NumberOfCopiesPopup #txtNumCopies {
+    width: 85px;
+}
+
+#docCtrlContainer {
+    margin-top: 10px;
+}
+
+#orderTableContainer {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #000000;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #000000;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #000000;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#tableShipmentsContainer {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #000000;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #000000;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #000000;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#tableRejectionNotesContainer {
+    padding-top: 10px;
+}
+
+.RejectNote {
+    display: block;
+    width: 75%;
+}
+
+#tblModifyVersionsContainer {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+#tblModifyVersions {
+    margin-left: -1px;
+}
+
+#tblModifyVersions TD {
+    padding-right: 20px;
+}
+
+#txtProofRecordCount {
+    width: 26px;
+}
+
+#tblOfflinePayment #divCardNumber,
+#tblOfflinePayment #divExpirationDate {
+    float: left;
+}
+
+#tblOfflinePayment #divCardNumber {
+    padding-right: 15px;
+}
+
+#tblOfflinePayment #divExpirationDate {
+    width: 175px;
+}
+
+#tblOfflinePayment .ddlCreditDate {
+    max-width: 75px;
+}
+
+#trHTML5CompatibilityAlert .alert,
+#trHTML5CompatibilityAlert .alert2 {
+    background-color: #ffc0c0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+#trHTML5CompatibilityAlert .alert {
+    margin-bottom: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: -5px;
+}
+
+#trHTML5CompatibilityAlert .alert2 {
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -15px;
+}
+
+.tdContainer {
+    float: left;
+}
+
+.mobile {
+    display: none !important;
+}
+
+.webProofTab {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #ddd;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #ddd;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #ddd;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #ddd;
+    border-top-style: solid;
+    border-top-width: 1px;
+    cursor: pointer;
+    display: inline;
+    height: 30px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 100px;
+}
+
+.webProofTab.selected {
+    background-color: #c8cacb;
+}
+
+.webProofMain {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #ddd;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #ddd;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #ddd;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #ddd;
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding-left: 5px;
+    padding-top: 20px;
+    position: relative;
+    top: 11px;
+}
+
+.webProofFrame {
+    height: auto;
+    min-height: 800px;
+    width: 100%;
+}
+
+.dtPickerTable {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.datetimeWrapper div {
+    float: left;
+}
+
+.approvalContainer {
+    margin-bottom: 10px;
+    margin-left: -2px;
+}
+
+.approvalContainer TABLE TR TD:first-child {
+    padding-left: 0;
+}
+
+td.approverRejectConfirm {
+    padding-bottom: 10px;
+}
+
+.engagementMessage {
+    line-height: 30px;
+}
+
+.ReportDetailDiv {
+    text-align: center;
+}
+
+.mcReportsWaitingDiv {
+    bottom: 180px;
+    display: block;
+    left: 50%;
+    position: absolute;
+    width: 40px;
+}
+
+.quantityCalculationInProgressText {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.quantityCalculationInProgressImg {
+    background-image: url("/ustore/images/ImageLoading.gif");
+    height: 66px;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 30px;
+    width: 66px;
+}
+
+.NewItemMenu .VerticalMenuDiv {
+    float: left;
+    height: 100%;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    width: 100%;
+}
+
+.NewItemMenu .VerticalMenuDiv ul li {
+    height: 30px;
+    line-height: 2em;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+    white-space: nowrap;
+}
+
+.NewItemMenuTitle {
+    background-color: #bfbfbf;
+    font-weight: 600;
+    min-height: 20px;
+    padding-bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+}
+
+.NewItemMenu li span {
+    height: 100%;
+}
+
+.NewItemMenu li span.UploadName {
+    border-left-color: #d0d0d0;
+    border-left-style: solid;
+    border-left-width: 1px;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.NewItemMenu li span.UploadImage {
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-bottom: 2px;
+    padding-left: 30px;
+    padding-right: 0;
+    padding-top: 2px;
+}
+
+.NewItemMenu li.UploadFileMenuItem.local .UploadImage {
+    background-image: url("/ustore/images/Folder.png");
+}
+
+.FileAttachmentList li {
+    margin-bottom: 10px;
+}
+
+.FileAttachmentList li a {
+    color: #1a1a1a;
+    cursor: pointer;
+    padding-left: 4px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+
+.fileAttachDelete {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("icon-delete.gif");
+    background-origin: padding-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    vertical-align: middle;
+    width: 16px;
+}
+
+.fileAttachDropFilesHere {
+    height: 140px;
+    margin-bottom: 12px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 12px;
+    width: 100%;
+    z-index: 100;
+}
+
+.fileAttachDropFilesHere span {
+    display: none;
+}
+
+.fileAttachDropFilesHere.drag {
+    border-bottom-style: dashed;
+    border-left-style: dashed;
+    border-right-style: dashed;
+    border-top-style: dashed;
+    color: #808080;
+    display: table-cell;
+    font-size: 30px;
+    height: 158px;
+    text-align: center;
+    vertical-align: middle;
+    width: 500px;
+    z-index: 100;
+}
+
+.fileAttachDropFilesHere.drag span {
+    display: block;
+    pointer-events: none;
+}
+
+.VerticalMenuDiv ul {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    width: 100%;
+}
+
+.VerticalMenuDiv ul li {
+    font-weight: 500;
+    line-height: 1.4em;
+    list-style-type: none;
+    min-height: 30px;
+    text-align: left;
+}
+
+.VerticalMenuDiv .disabledItem {
+    color: #aaaaaa;
+}
+
+.VerticalMenuDiv .disabledItem:hover {
+    background-attachment: scroll !important;
+    background-clip: border-box !important;
+    background-color: white !important;
+    background-image: none !important;
+    background-origin: padding-box !important;
+    background-position: 0 0 !important;
+    background-repeat: repeat !important;
+    background-size: auto auto !important;
+    color: #aaaaaa;
+    cursor: default;
+}
+
+.ie .VerticalMenuDiv .disabledItem:hover {
+    background-attachment: scroll !important;
+    background-clip: border-box !important;
+    background-color: white !important;
+    background-image: none !important;
+    background-origin: padding-box !important;
+    background-position: 0 0 !important;
+    background-repeat: repeat !important;
+    background-size: auto auto !important;
+    color: #aaaaaa;
+    cursor: default;
+}
+
+.VerticalMenuDiv ul li:hover,
+.VerticalMenuDiv_ul_li_active {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: -moz-linear-gradient(center top, #acd01e 27%, #b8da30 66%);
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    cursor: pointer;
+}
+
+.xmpDialog {
+    display: none;
+}
+
+.ui-dialog-titlebar.noTitle {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+}
+
+.ui-dialog-titlebar.noTitle.noIcon {
+    display: none;
+}
+
+div,
+header,
+nav,
+ul,
+li,
+body {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+body {
+    border-bottom-style: solid;
+    border-bottom-width: 0;
+    border-left-style: solid;
+    border-left-width: 0;
+    border-right-style: solid;
+    border-right-width: 0;
+    border-top-style: solid;
+    border-top-width: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+html {
+    background-attachment: fixed;
+    background-clip: border-box;
+    background-color: white;
+    background-origin: padding-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+}
+
+a:link,
+a:visited,
+.addressItemHead .personName,
+A.BigLink,
+A.BigLink:hover,
+a.SmallLink:hover,
+.DeliveryStatus,
+.TrackingLink {
+    color: #1a1a1a;
+}
+
+a.SmallLink {
+    color: #ffffff;
+}
+
+#searcharea {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: white;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    height: 54px;
+    position: relative;
+}
+
+.ThemedPagedFullWidthMaster #searcharea {
+    width: 959px;
+    background-color: white;
+    opacity: 0.9;
+}
+
+.subtitleProductName,
+.subtitle {
+    bottom: 5px;
+    display: inline-block;
+    font-size: 16px;
+    font-variant-alternates: inherit;
+    font-variant-caps: inherit;
+    font-variant-east-asian: inherit;
+    font-variant-ligatures: inherit;
+    font-variant-numeric: inherit;
+    font-variant-position: inherit;
+    font-weight: bold;
+    left: 42px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    position: absolute;
+}
+
+.subTitleProductNameExists {
+    display: none;
+}
+
+.ie7 .subtitleProductName,
+.ie7 .subtitle {
+    display: block;
+}
+
+.LoginMaster .subtitle {
+    left: 16px;
+}
+
+.productSearchBox {
+    bottom: 13px;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    position: absolute;
+    right: 20px;
+}
+
+.ThemedPageMaster .productSearchBox {
+    bottom: 35px;
+    border-style: solid;
+}
+
+.productSearchBox > div {
+    float: left;
+}
+
+.productSearchBox input[type="submit"] {
+    background-color: #292929;
+    background-image: url("magnifing-glass.png");
+}
+
+.userWelcome {
+    background-color: transparent;
+    border-width: 0;
+    float: right;
+    height: auto;
+    left: 530px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: right;
+    top: 73px;
+    width: 420px;
+    z-index: 2;
+}
+
+.userWelcome span {
+    height: 29px;
+    font-size: 25px;
+    line-height: 11px;
+    text-align: right;
+    width: 420px;
+}
+
+#masterPageFooter {
+    background-color: white;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-color: transparent;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-style: solid;
+    border-top-width: 0px;
+    height: 60px;
+    width: 100%;
+    opacity: 1;
+}
+
+#postFooter {
+    margin-bottom: 25px;
+}
+
+#fullWidthContent {
+    background-color: #ffffff;
+    height: auto;
+    min-height: 480px;
+}
+
+#header {
+    background-image: url("header_background.jpg");
+    border-left-color: #c6ccd9;
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-right-color: #c6ccd9;
+    border-right-style: solid;
+    border-right-width: 3px;
+    border-top-color: #c6ccd9;
+    border-top-style: solid;
+    border-top-width: 3px;
+    float: left;
+    height: 112px;
+    text-align: left;
+    width: 959px;
+    z-index: 1000;
+}
+
+a {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+.Link {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+
+.productSearchTD {
+    background-color: #ffffff;
+    text-align: right;
+}
+
+.cellbottom {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: 0;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: 0;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 0;
+}
+
+.clearfloat {
+    clear: both;
+}
+
+.emphasis {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.formfield {
+    font-size: 11px;
+}
+
+.formprompt {
+    font-size: 11px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.formpromptred {
+    font-size: 11px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.formtitle {
+    background-color: #007abe;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.leftbar {
+    background-color: #009900;
+    font-size: 12px;
+    font-weight: normal;
+    height: 100%;
+    width: 154px;
+}
+
+.welcomeIFrame {
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    height: 980px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 101%;
+    margin-left:-2px;
+    
+}
+
+.homeIFrameContainer {
+    vertical-align: bottom;
+}
+
+.homeOrderListsContainer {
+    background-color: transparent;
+    display: flex;
+    font-size: 11px;
+    width: 100%;
+}
+
+.homeOrderListsContainer > div {
+    float: right;
+}
+
+.mainareaFullWidth {
+    background-color: white;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    float: left;
+    min-height: 480px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    width: 1000px;
+    margin-left:2%;
+}
+
+.LoginMaster #bodyarea {
+    background-color: #ffffff;
+    width: 966px;
+}
+
+.mainAreaFooter {
+    background-color: #ffffff;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    clear: left;
+}
+
+.mainAreaFooterFullWidth {
+    background-color: #f2f2f2;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    float: left;
+    padding-bottom: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 12px;
+    width: 100%;
+}
+
+.productDetailsContentFooter {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.mainAreaFooterFullWidth .WizardButtonsContainer {
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: medium;
+    margin-top: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 12px;
+    width: 959px;
+}
+
+.mainAreaFooterFullWidth table {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.mainAreaFooterFullWidth table.uEditButtons {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.mainAreaFooterFullWidth table > tr > td {
+    margin-right: 10px;
+}
+
+.selectedViewLabel {
+    color: #1a1a1a;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.gallerylayer {
+    padding-bottom: 15px;
+}
+
+.customizationPreview {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: gray;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: gray;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: gray;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: gray;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-shadow: 1px 1px 5px gray;
+}
+
+table.mainAreaFooterFullWidth {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: medium;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: medium;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: medium;
+}
+
+.mainarea_bg {
+    background-color: #efefef;
+}
+
+.navnorm {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-image: url("navnorm.gif");
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: medium;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: medium;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: medium;
+    cursor: pointer;
+    height: 21px;
+    padding-left: 10px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    vertical-align: middle;
+}
+
+.navsel {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-image: url("navsel.gif");
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: medium;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: medium;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: medium;
+    cursor: pointer;
+    height: 21px;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+
+.productbtns {
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+
+.productdesc {
+    font-size: 12px;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-weight: normal;
+}
+
+.productunits {
+    font-size: 11px;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-weight: normal;
+}
+
+.productname {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.productListCell {
+    left: 0;
+    min-height: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    position: relative;
+    top: 0;
+}
+
+#TdBottomMenu {}
+
+.rtcontentcol {
+    font-size: 10px;
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+.searchprompt {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.slogan {
+    color: #b5b5b5;
+    font-size: 13px;
+    font-weight: bold;
+    left: 23px;
+    position: absolute;
+    top: 125px;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.smallprompt {
+    font-size: 10px;
+    font-style: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.explanation {
+    font-size: 10px;
+    font-style: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    white-space: normal;
+}
+
+.ShoppingCartGridDeleteItem center a:link {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+.title {
+    font-size: 0px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.boundedBox {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #d9d9d9;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #d9d9d9;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #d9d9d9;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #d9d9d9;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.boxHeading {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.boxSubHeading {
+    clear: both;
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.boxSeparator {
+    border-bottom-color: #d9d9d9;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    line-height: 70%;
+}
+
+#fullpage {
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+}
+
+#logo {
+    height: 95px;
+    width: 250px;
+    position: absolute;
+    top: 28px;
+    left: 21px;
+    background-image: url(logo.png);
+    z-index: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#TdBottomLogo {
+    height: 25px;
+}
+
+.LoginBodyArea span.ErrorText {
+    margin-top: -20px;
+}
+
+#signinbtn {
+    background-image: url("icon-signin3.gif");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 36px;
+    width: 52px;
+}
+
+.SelectedAsset {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #0068a3;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #00ffff;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #00ffff;
+    border-left-style: none;
+    border-left-width: medium;
+    border-right-color: #00ffff;
+    border-right-style: none;
+    border-right-width: medium;
+    border-top-color: #00ffff;
+    border-top-style: none;
+    border-top-width: medium;
+}
+
+.UnselectedAsset {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #ffffff;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #00ffff;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #00ffff;
+    border-left-style: none;
+    border-left-width: medium;
+    border-right-color: #00ffff;
+    border-right-style: none;
+    border-right-width: medium;
+    border-top-color: #00ffff;
+    border-top-style: none;
+    border-top-width: medium;
+}
+
+A.BigLink {
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+A.BigLink:hover {
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+a.SmallLink {
+    font-size: 25px;
+    font-weight: normal;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+
+a.SmallLink:hover {
+    cursor: pointer;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+
+.PageTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Heading1 {
+    display: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.Heading2 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.breadCrumbs {
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.FormLabel {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.FormLabelLeft {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.Tooltip {
+    cursor: help;
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+.btnUnselected {
+    height: 30px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    text-align: center;
+}
+
+.btnUnselected a:link {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: 0;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: 0;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 0;
+    color: #666666;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btnSelected {
+    height: 30px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    text-align: center;
+}
+
+.btnSelected a:link {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: 0;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: 0;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 0;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+.FormField {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.FormButton {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -x-system-font: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #fff;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #8fb3cc;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #8fb3cc;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-right-color: #8fb3cc;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-top-color: #8fb3cc;
+    border-top-style: solid;
+    border-top-width: 2px;
+    cursor: pointer;
+    font-family: Verdana, Arial;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size: 11px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-weight: bold;
+    height: 24px;
+    line-height: normal;
+}
+
+.FormButton:hover {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #38789c;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #38789c;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-right-color: #38789c;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-top-color: #38789c;
+    border-top-style: solid;
+    border-top-width: 2px;
+}
+
+.FilePick {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #e1e1e1;
+    border-bottom-color: #7b7b7b;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #7b7b7b;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #7b7b7b;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #7b7b7b;
+    border-top-style: solid;
+    border-top-width: 1px;
+    font-size: 11px;
+}
+
+.SmallItalic {
+    font-size: 10px;
+    font-style: italic;
+    font-weight: normal;
+    white-space: normal;
+}
+
+.BigItalic {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.Italic {
+    font-style: italic;
+}
+
+.Error {
+    font-size: 12px;
+}
+
+.RejectText,
+.PendingText,
+.ApprovedText,
+.ModifiedText {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.RejectBack {
+    background-color: #f2dcdb !important;
+    font-size: 11px;
+}
+
+.RejectBackAlt {
+    background-color: #e6b9b8 !important;
+    font-size: 11px;
+}
+
+.ModifyBack {
+    background-color: #a4cad2 !important;
+    font-size: 11px;
+}
+
+.InlineImage {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: 0;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: 0;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 0;
+    vertical-align: middle;
+}
+
+.THFontText {
+    background-color: #d3d3d3;
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+.TDItemText {
+    background-color: white;
+    font-size: 8pt;
+}
+
+.TDAltItemText {
+    background-color: #cccccc;
+    font-size: 8pt;
+}
+
+.RTHFontText {
+    background-color: #d3d3d3;
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+.RTDItemText {
+    background-color: white;
+    font-size: 8pt;
+}
+
+.RTDAltItemText {
+    background-color: #cccccc;
+    font-size: 8pt;
+}
+
+.OrderApprovalListFooter {
+    background-color: transparent;
+    font-size: 11px;
+    padding-top: 5px;
+}
+
+.PositionedImage3px {
+    left: 3px;
+    position: relative;
+}
+
+.PositionedImage5px {
+    left: 5px;
+    position: relative;
+}
+
+.PaddedTD {
+    padding-left: 5px;
+}
+
+.CartTable {}
+
+.CartListHead {
+    background-color: #00598b;
+    line-height: 15pt;
+    padding-left: 5px;
+}
+
+.CartListItem {
+    background-color: #ffffff;
+    border-bottom-color: dimgray;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    font-size: 11px;
+    line-height: 15pt;
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: normal;
+}
+
+.CartListItemAlt {
+    background-color: #f2f2f2;
+    border-bottom-color: dimgray;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    font-size: 11px;
+    line-height: 15pt;
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: normal;
+}
+
+.CartListFooter {
+    background-color: #dddca3;
+    line-height: 10pt;
+}
+
+#cartOrderTableWrapper .productName {
+    width: 150px;
+}
+
+.SaveForLaterCartListHead {
+    line-height: 15pt;
+    padding-left: 5px;
+}
+
+.RejectHead {
+    background-color: #c0504d !important;
+    border-bottom-color: #c0504d !important;
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+}
+
+.RejectItem,
+.RejectItem p {
+    background-color: #f2dcdb !important;
+}
+
+.RejectItemAlt,
+.RejectItemAlt p {
+    background-color: #e6b9b8 !important;
+}
+
+.ModifiedFromOrderItem,
+.ModifiedFromOrderItem p {
+    background-color: #a4cad2 !important;
+}
+
+.PlacedDirectlyItem,
+.PlacedDirectlyItem p {}
+
+.PriceListTable {
+    border-bottom-color: Black;
+    border-collapse: collapse;
+    border-left-color: Black;
+    border-right-color: Black;
+    border-top-color: Black;
+    font-size: 8pt;
+    width: 400px;
+}
+
+.PriceListHead {
+    background-color: #00598b;
+    border-bottom-color: dimgray;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-left-color: dimgray;
+    border-left-style: solid;
+    border-left-width: 1px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 20pt;
+    padding-left: 5px;
+    text-align: right;
+}
+
+.PriceListItem {
+    background-color: #ffffff;
+    border-bottom-color: dimgray;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-left-color: dimgray;
+    border-left-style: solid;
+    border-left-width: 1px;
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: right;
+}
+
+.PriceListItemAlt {
+    background-color: #f2f2f2;
+    border-bottom-color: dimgray;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-left-color: dimgray;
+    border-left-style: solid;
+    border-left-width: 1px;
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: right;
+}
+
+.PriceListFooter {
+    background-color: #00598b;
+    line-height: 10pt;
+}
+
+.smalltext {
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.ItemsAssignAllDiv {
+    float: right;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    position: relative;
+    right: 10px;
+}
+
+.MailingItemsTablesSubTitle {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.TablesTitle {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.Blueborder {
+    border-top-color: #00598b;
+    border-top-style: solid;
+    border-top-width: 3px;
+}
+
+.SubSectionTable {
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+    text-align: left;
+    width: 350px;
+}
+
+.tablehead td {
+    border-bottom-color: #a8d8e8;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tablerow td {
+    border-bottom-color: #cccccc;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    font-size: 11px;
+    font-weight: normal;
+    height: 14px;
+}
+
+.SiteLink {
+    font-size: 12px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+.SiteLink:hover {}
+
+DIV.LoadingDivHeader {
+    background-image: url("wait.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-style: oblique;
+    height: 12px;
+    left: 2px;
+    padding-left: 2px;
+    position: absolute;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: blink;
+    text-decoration-style: solid;
+    top: 2px;
+    width: 148px;
+}
+
+.ShippingPanel {}
+
+.ShippingAddressBoxHeader {
+    padding-left: 5px;
+}
+
+.ShippingAddressBoxCell {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.ShippingAddressBox {
+    background-color: #ebf1de;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    width: 100%;
+}
+
+.ShippingAddressBoxFooter {
+    background-color: #ebf1de;
+    padding-bottom: 25px;
+    padding-left: 5px;
+    width: 100%;
+}
+
+.CheckoutAddressHeading table {
+    position: relative;
+}
+
+.MailingAddressItems {
+    background-color: White;
+    margin-right: 20px;
+    position: relative;
+    top: 10px;
+}
+
+.ShippingAddressItems {
+    background-color: White;
+    position: relative;
+    top: 10px;
+    vertical-align: top;
+    width: 880px;
+}
+
+.ShippingAddressItemsContainer {
+    background-color: White;
+    clear: both;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    position: relative;
+    top: 10px;
+    width: 905px;
+}
+
+.MailingGridCell {
+    border-bottom-color: #c6dddf;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #c6dddf;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-top-color: #c6dddf;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-left: 10px;
+    width: 650px;
+}
+
+.MailingGridServicesCell {
+    border-bottom-color: #c6dddf;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #c6dddf;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #c6dddf;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #c6dddf;
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding-left: 10px;
+    width: 250px;
+}
+
+.AddressBody {
+    font-size: 11px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.AddressBlock {
+    background-color: #f3f3f3;
+    clear: both;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    text-align: left;
+    vertical-align: top;
+    width: 96%;
+}
+
+.AddressHeading {
+    clear: both;
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.AddressSub {
+    clear: both;
+    display: inline-block;
+    float: left;
+    font-size: 11px;
+    position: relative;
+}
+
+.AddressEditButton {
+    float: left;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-top: 16px;
+    position: relative;
+}
+
+.ShippingAddressHeading {
+    clear: both;
+    display: block;
+    float: left;
+    font-weight: bold;
+    padding-top: 20px;
+    position: relative;
+}
+
+.AddressNote {
+    clear: both;
+    display: inline-block;
+    float: left;
+    font-size: 11px;
+    padding-top: 10px;
+    position: relative;
+    white-space: normal;
+}
+
+.CheckoutTable {
+    border-bottom-color: Black;
+    border-bottom-width: 1px;
+    border-left-color: Black;
+    border-left-width: 1px;
+    border-right-color: Black;
+    border-right-width: 1px;
+    border-top-color: Black;
+    border-top-width: 1px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.CheckoutTable td {
+    border-right-color: Black;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.CheckoutHead {
+    background-color: #00598b;
+    font-size: 11px;
+    font-weight: bold;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.CheckoutItem {
+    background-color: #ffffff;
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 150px;
+}
+
+.CheckoutItemAlt {
+    background-color: #f2f2f2;
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.DeliveryStatus {
+    border-bottom-color: dimgray;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 15pt;
+}
+
+.TrackingLink {
+    border-bottom-color: dimgray;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 15pt;
+}
+
+.LoadDivTransparent {
+    background-color: white;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    z-index: 9997;
+}
+
+.LoadDiv {
+    background-color: black;
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    vertical-align: middle;
+    visibility: hidden;
+    z-index: 9998;
+}
+
+.LoadDivImg {
+    left: 48%;
+    position: absolute;
+    top: 48%;
+    visibility: hidden;
+    z-index: 9999;
+}
+
+.dgRecipientsComments {
+    background-color: #ebf1de;
+}
+
+.SinglePrice {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.SinglePriceCurrency {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.productgridview div.productPrice {
+    text-align: left;
+}
+
+.productPriceInList,
+.productPriceInGrid {
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: baseline;
+}
+
+.productGridPriceFrom {
+    font-size: 9px;
+    font-weight: normal;
+    margin-right: 2px;
+    vertical-align: baseline;
+}
+
+.productGridCurrency {
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 2px;
+    vertical-align: baseline;
+}
+
+.productListPriceFrom {
+    font-size: 9px;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+
+.productListCurrency {
+    font-size: 14px;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+
+.ProductDescMain {}
+
+.ProductDescMainText {
+    float: none;
+}
+
+.ProductDescMainSlide {
+    float: none;
+}
+
+.ProductDescMainSpacer {
+    float: none;
+    height: 20px;
+    width: 25px;
+}
+
+.groupDesc {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.groupDesc SPAN {
+    font-size: 13px;
+    font-weight: bold;
+    position: relative;
+    top: 14px;
+}
+
+.ButtonAreaHelpButton {
+    background-image: url("header_help.gif");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+.ButtonAreaCartButton {
+    background-image: url("header_cart.gif");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+.ButtonAreaAccountButton {
+    background-image: url("header_account.gif");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+.ButtonAreaLogoutButton {
+    background-image: url("header_logout.gif");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+.ButtonAreaDraftButton {
+    background-image: url("header_draft.gif");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+.ButtonAreaHomeButton {
+    background-image: url("header_home.gif");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+.SimpleSearchBtn {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-image: url("search_glass.png");
+    background-repeat: no-repeat;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: 0;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: 0;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 0;
+    cursor: pointer;
+    display: block;
+    height: 17px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    width: 17px;
+}
+
+.SimpleSearchBtn:hover {
+    background-image: url("search_glass_hover.png");
+}
+
+.Expand {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-image: url("expand.png");
+    background-repeat: no-repeat;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: 0;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: 0;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 0;
+    cursor: pointer;
+    height: 13px;
+    padding-left: 17px;
+    width: 13px;
+}
+
+.Collapse {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-image: url("collapse.png");
+    background-repeat: no-repeat;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: 0;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: 0;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 0;
+    cursor: pointer;
+    height: 13px;
+    padding-left: 17px;
+    width: 13px;
+}
+
+.OrderButton {}
+
+.PagerStyle {
+    margin-bottom: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 1px;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    padding-top: 20px;
+    text-align: right;
+}
+
+.PagerTop .PagerStyle {
+    padding-top: 0;
+}
+
+.PagerBottom .PagerStyle {
+    padding-bottom: 0;
+}
+
+.PagerHyperlinkStyle {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #f7f7f7;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #c7c7c7;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #c7c7c7;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #c7c7c7;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #c7c7c7;
+    border-top-style: solid;
+    border-top-width: 1px;
+    font-size: 10px;
+    font-weight: 100;
+    margin-bottom: 0;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 0;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 1px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+a.PagerHyperlinkStyle {
+    color: #444;
+}
+
+.PagerHyperlinkStyle:hover {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #ccc;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #666;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #666;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #666;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #666;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.PagerDisabledHyperlinkStyle {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #fdfdfd;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #cdcdcd;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #cdcdcd;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #cdcdcd;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #cdcdcd;
+    border-top-style: solid;
+    border-top-width: 1px;
+    font-size: 10px;
+    font-weight: 100;
+    margin-bottom: 0;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 0;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 1px;
+}
+
+.PagerCurrentPageStyle {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #666;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #666;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #666;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #666;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #666;
+    border-top-style: solid;
+    border-top-width: 1px;
+    font-size: 10px;
+    font-weight: 100;
+    margin-bottom: 0;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 0;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 1px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+.KeywordsPanel {}
+
+.KeywordLink {
+    font-size: 12px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+
+.DrafOrderButton {
+    cursor: pointer;
+}
+
+.StepDescription {
+    display: block;
+    font-size: 11px;
+    padding-bottom: 20px;
+}
+
+.CouponBar {
+    background-color: #dbeef4;
+}
+
+.CouponDiscountCell {
+    text-align: center;
+    width: 15%;
+}
+
+.ClearingGatewayMessage {
+    display: block;
+    white-space: normal;
+}
+
+.WizardButtonsContainer > div {
+    margin-right: 12px;
+}
+
+.ItemsAddressContainer {
+    clear: both;
+    float: left;
+    margin-top: 15px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    vertical-align: top;
+    width: 100%;
+}
+
+.ItemsGridContainer {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: 1px;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: 1px;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 1px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: left;
+    vertical-align: top;
+    width: 99%;
+}
+
+.AddressGridContainer {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: 1px;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: 1px;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 1px;
+    position: relative;
+    vertical-align: top;
+    width: 98%;
+}
+
+.WizardContainer {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #c3d69b;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #c3d69b;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #c3d69b;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #c3d69b;
+    border-top-style: solid;
+    border-top-width: 1px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.WizardContent {
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+
+.WizardBreadCrumb {
+    background-color: #f0f5fa;
+    height: 100px;
+    padding-left: 15px;
+    padding-top: 7px;
+}
+
+.WizardStepHeadingText {
+    padding-left: 10px;
+}
+
+.WizardSubLabel {
+    clear: both;
+    display: block;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 4px;
+    position: relative;
+    text-align: left;
+    top: 8px;
+}
+
+.WizardLabel {
+    clear: both;
+    display: block;
+    float: left;
+    font-size: 11px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    position: relative;
+    text-align: left;
+    top: 8px;
+}
+
+.WizardLabelNoRecords {
+    clear: both;
+    display: block;
+    float: left;
+    font-size: 11px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    position: relative;
+    text-align: left;
+    top: -10px;
+    vertical-align: middle;
+}
+
+.WizardStepHeading {
+    clear: both;
+    display: block;
+    float: left;
+    font-size: 11px;
+    padding-bottom: 4px;
+    text-align: left;
+    width: 100%;
+}
+
+.WizardStepHeadingCurrent {
+    clear: both;
+    display: inline;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    text-align: left;
+    width: 100%;
+}
+
+.WizardSubHeading {
+    clear: both;
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 170px;
+    padding-bottom: 25px;
+    position: relative;
+    top: 8px;
+}
+
+.WizardStepsNextPrevSpace {
+    width: 62%;
+}
+
+.WizardDivider {
+    height: 10px;
+}
+
+.SplitWizardAddNewAddress {
+    float: left;
+    position: relative;
+    right: 15px;
+}
+
+.WizardHeader {
+    text-align: center;
+}
+
+.WizardHeader .XmpImageButton {
+    float: right;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.OrderPriceLabelWidth {
+    width: 500px;
+}
+
+.RegisterLink {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.CaptchaContainer {
+    margin-bottom: 10px;
+    margin-left: 137px;
+    margin-right: 15px;
+    margin-top: 7px;
+}
+
+.captcha {}
+
+.captcha SPAN {
+    font-size: 11px;
+}
+
+.captcha INPUT {
+    font-size: 11px;
+}
+
+.OrderPriceContainer {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #d9d9d9;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #d9d9d9;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-right-color: #d9d9d9;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-top-color: #d9d9d9;
+    border-top-style: solid;
+    border-top-width: 2px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 35px;
+    padding-top: 15px;
+}
+
+.LockedUserDiv {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #c6ccd9;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #c6ccd9;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #c6ccd9;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #c6ccd9;
+    border-top-style: solid;
+    border-top-width: 1px;
+    height: 255px;
+    margin-bottom: 0;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 0;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    width: 470px;
+}
+
+.LockedUserTitle {
+    color: Red;
+}
+
+.LoginPasswordExpired {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #c6ccd9;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #c6ccd9;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #c6ccd9;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #c6ccd9;
+    border-top-style: solid;
+    border-top-width: 1px;
+    width: 454px;
+}
+
+.LockedUser {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #c6ccd9;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #c6ccd9;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #c6ccd9;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #c6ccd9;
+    border-top-style: solid;
+    border-top-width: 1px;
+    text-align: center;
+    width: 454px;
+}
+
+.MerchantAddressBody {
+    font-size: 11px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.RegisterPendingDiv {
+    line-height: 20px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.ActivationDiv {
+    line-height: 20px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.AccountNotActivatedDiv {
+    line-height: 20px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.addressItemTable {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #cccccc;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #cccccc;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #cccccc;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #cccccc;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.addressItemHead {
+    background-color: #e7f1ce;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.addressItemBody {
+    background-color: #ffffff;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+div.productListTable {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: transparent;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: transparent;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: transparent;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+div.productListTable:hover {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #e7f1ce;
+    border-bottom-color: #d0d0d0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #d0d0d0;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #d0d0d0;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #d0d0d0;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+div.productListTable div.thumbnail {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    border-bottom-color: #d0d0d0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #d0d0d0;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #d0d0d0;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #d0d0d0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 9px;
+}
+
+div.productListTable div.productname a {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+div.productlistview {
+    border-bottom-color: #d0d0d0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 9px;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 9px;
+    width: 760px;
+}
+
+div.productlistview div.productname,
+div.productlistview div.productdesc,
+div.productlistview div.productQtyRange {
+    width: 335px;
+}
+
+div.productListTable div.productdesc a,
+div.productListTable div.productdesc a:hover {
+    font-size: 11px;
+}
+
+div.productlistview div.productQtyRange,
+div.productgridview div.productQtyRange {
+    font-size: 10px;
+}
+
+div.productgridview {
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+div.productlistview div.overlay {
+    bottom: 0;
+    top: auto;
+}
+
+div.productListTable div.overlay div {
+    width: 108px;
+}
+
+div.productlistview div.overlay div,
+div.productlistview div.overlay div:hover,
+div.productgridview div.overlay div,
+div.productgridview div.overlay div:hover {
+    background-color: #e8e8e8 !important;
+}
+
+div.productListTable .productDownload {
+    border-bottom-color: #d0d0d0;
+    border-left-color: #d0d0d0;
+    border-right-color: #d0d0d0;
+    border-top-color: #d0d0d0;
+}
+
+.productgridview .productEnlarge {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0;
+}
+
+.productgridview .productDownload {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0px;
+}
+
+.productlistview .productEnlarge {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.productlistview .productDownload {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.SecondaryCurrencyLabel {
+    font-size: 10px;
+    width: 150px;
+}
+
+.ShoppingCartSecondaryCurrencyLabel {
+    font-size: 10px;
+}
+
+.ShoppingCartControl .productName,
+.ShoppingCartControl .editProduct {
+    clear: left;
+    width: auto;
+}
+
+.ShoppingCartControl .productName {}
+
+.ShoppingCartControl .editProduct {
+    background-image: none;
+    padding-left: 0;
+}
+
+.BoldPriceLabel {
+    font-weight: bold;
+}
+
+.OrderPriceTable {
+    font-weight: bold;
+}
+
+.OrderPriceTable td.tdAmount {
+    width: 150px;
+}
+
+.MailingItemsTablesSubText {
+    font-weight: bold;
+}
+
+.OrderDetailsBoldPriceLabel {
+    font-weight: bold;
+}
+
+.OrderDetailsPriceSummaryCaption {
+    font-weight: bold;
+    text-align: left;
+    width: 50%;
+}
+
+.OrderDetailsInventoryLabel {
+    color: Red;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.OrderDetailsProductNameDiv {
+    font-weight: bold;
+}
+
+.PaymentCurrencyMessage {
+    font-size: 10px;
+}
+
+.OrderDetailsPaymentCurrency {
+    width: 40%;
+}
+
+.OrderDetailsPriceSummarySpace {
+    width: 10%;
+}
+
+.OrderFinalStep_Proof_XmpImageButton {
+    display: none;
+}
+
+div.proofLink {
+    background-color: transparent;
+    background-image: url("proofRight.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+div.proofLink span,
+div.proofLink a {
+    background-color: transparent;
+    background-image: url("proof_left.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    color: #ffffff !important;
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    height: 45px;
+    margin-right: 12px;
+    padding-left: 50px;
+    padding-right: 9px;
+    padding-top: 9px;
+    text-transform: uppercase;
+}
+
+.dtiStringTextBox {
+    width: 252px;
+}
+
+.dddlValue select {
+    width: 257px;
+}
+
+.trOptionRepeater.hover {
+    cursor: pointer;
+}
+
+.trOptionRepeater.selected {
+    background-color: #ececec;
+}
+
+.trOptionRepeater .optionTitle {
+    font-weight: bold;
+}
+
+.divOptionRepeater {
+    float: left;
+    height: 85px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100px;
+}
+
+.divOptionRepeater.hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.divOptionRepeater.selected {
+    font-weight: bold;
+}
+
+.divOptionRepeater .imgIconWrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.FieldOptionItem.FOGrid.selected .optionTitle {
+    color: #292929;
+}
+
+.roundedCorners {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #000000;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #000000;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #000000;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #000000;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.divOptionRepeater.selected .imgIconWrapper {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #87a01f;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #87a01f;
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-right-color: #87a01f;
+    border-right-style: solid;
+    border-right-width: 3px;
+    border-top-color: #87a01f;
+    border-top-style: solid;
+    border-top-width: 3px;
+}
+
+#divClearFloat {
+    clear: left;
+}
+
+.CheckOutPage .cartSummary {
+    margin-top: -50px;
+}
+
+* ul.CheckOutPage .cartSummary {
+    margin-top: 0;
+}
+
+.CheckOutPage .cartSummary .detailBackground {
+    background-color: #f5fae7;
+}
+
+.CheckOutPage .cartSummary .totalBackground {
+    background-color: #e7f1cd;
+}
+
+header {
+    height: 146px;
+    background-color: black;
+    margin-top: 4px;
+    margin-bottom: -1px;
+    opacity: 0.81;
+}
+
+nav {
+    float: left;
+    margin-left: 0;
+    margin-top: -21px;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header li.links {
+    position: absolute;
+    right: 10px;
+    top: 1px;
+    margin-right: 18px;
+}
+
+#fullpage header li.links > div {
+    float: right;
+    margin-left: 100px;
+    margin-right: 20px;
+}
+
+#fullpage header li.links a {
+    display: inline-block;
+    margin-left: 25px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    color: gray;
+    font-size: 7px;
+}
+
+.ie7 nav ul li,
+.ie7 #fullpage nav li.links a {
+    display: block;
+    float: left;
+}
+
+#fullpage ul .links a {
+    font-size: 11px;
+}
+
+.menuButton {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #f2f2f2;
+    background-image: -moz-linear-gradient(center bottom, #ffffff 0%, #fcfcfc 57.13%, #f3f3f3 96.83%, #f2f2f2 100%);
+    border-bottom-color: #f2f2f2;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 0px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #f2f2f2;
+    border-left-style: solid;
+    border-left-width: 0px;
+    border-right-color: #f2f2f2;
+    border-right-style: solid;
+    border-right-width: 0px;
+    border-top-color: -moz-use-text-color;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-style: none;
+    border-top-width: 0;
+    font-size: 0px;
+    height: 0px;
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0;
+    min-width: 60px;
+    padding-bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0;
+    text-align: center;
+    transition-duration: 0.4s;
+    transition-property: height;
+    transition-timing-function: ease-out;
+}
+
+.menuButton:hover {
+    height: 0px;
+}
+
+.menuButton.selected a {
+    font-weight: bold;
+}
+
+.menuButton.color:hover,
+.menuButton.selected.color {
+    background-color: #292929;
+    background-image: -moz-linear-gradient(center bottom, #292929, #292929);
+}
+
+.menuButton a {
+    display: block;
+    height: 100%;
+    font-size: 18px;
+    margin-top: 26px;
+}
+
+.WizardButtonsContainer div {
+    display: inline-block;
+}
+
+.WizardButtonsContainer .back,
+.productDetailsBack,
+.backLinkContainer,
+.orderApprovalListBackButtonWrapper {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("back_arrow.png");
+    background-origin: padding-box;
+    background-position: 20px center;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+}
+
+.backLinkContainer {
+    padding-bottom: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 12px;
+}
+
+.ie7 .WizardButtonsContainer div {
+    display: inline;
+}
+
+div.SaveDraftButtonContainer {
+    float: right;
+}
+
+.orderApprovalListBackButtonWrapper {
+    background-position: 20px 57px;
+    padding-top: 50px;
+}
+
+div.XmpImageDropDownList {
+    background-image: url("dropdown_arrow_white.png");
+}
+
+ul.choices li {
+    background-color: #a0a0a0;
+}
+
+div.flagList,
+div.dropDownCurrencies {
+    float: none;
+    position: absolute;
+    top: 35px;
+}
+
+div.flagList {
+    right: 47px;
+}
+
+div.dropDownCurrencies {
+    right: -4px;
+    width: 45px;
+}
+
+div.XmpImageDropDownList a.toggler {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #d0d0d0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #d0d0d0;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #d0d0d0;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #d0d0d0;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+div.XmpImageDropDownList:hover {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: transparent;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: transparent;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: transparent;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+#TdBottomLogo,
+#TdBottomMenu {
+    display: none;
+}
+
+.ThemedPageMaster #bodyarea {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-image: none;
+    background-color: transparent;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    text-align: left;
+    z-index: 1;
+}
+
+.ThemedPageMaster #bodyarea::before {
+    background-color: transparent;
+    opacity: 1;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    top: 1px;
+    width: 966px;
+    z-index: -1;
+    margin-left: 0px;
+    margin-bottom: 4px;
+    background-image: url(bg.png);
+}
+
+.ie8 .ThemedPageMaster #bodyarea::before {
+    bottom: 0;
+}
+
+.ie7 #content {
+    border-right-color: #9a9a9a;
+    border-right-style: solid;
+    border-right-width: 1px;
+    width: 793px;
+}
+
+.ThemedPageMaster #searcharea {
+    background-image: url(color_bar.png) no-repeat 0 0;
+    opacity: 0.7;
+    float: right;
+    height: auto;
+    top: 65px;
+    width: 786px;
+    z-index: 2;
+}
+
+.mainarea {
+    background-color: transparent;
+    opacity: 1.0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    margin-top: 0px;
+    min-height: 645px;
+    width: 100%;
+}
+
+#contentArea {
+    display: inline-block;
+    float: right;
+    height: 100%;
+    width: 100%;
+    margin-left: 1px;
+    margin-top: -47px;
+    background-color: transparent;
+}
+
+#content {
+    background-image: transparent;
+    opacity: 1.0;
+    height: auto;
+    top: 80px;
+    min-height: 645px;
+}
+
+#navArea {
+    background-color: transparent;
+    margin-top: 1px;
+    margin-right: 4px;
+    overflow-x: auto;
+    overflow-y: auto;
+    width: 204px;
+    min-height: 675px;
+    opacity: 0.95;
+    margin-bottom: 4px;
+    display: none;
+}
+
+.ie7 #navArea {
+    background-color: #e8e8e8;
+}
+
+#fullpage.ThemedPageMaster #navArea,
+#fullpage.LoginMaster #navArea {
+    padding-top: 20px;
+}
+
+#fullpage.ThemedPageMaster #bodyarea,
+#fullpage.LoginMaster #bodyarea {
+    float: left;
+    width: 100%;
+}
+
+.LoginMaster .flagList {
+    position: absolute;
+    right: 20px;
+    top: 85px;
+}
+
+.nav a {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+.nav a:visited {
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+.treeViewContainer {
+    display: block;
+    height: auto;
+    width: 172px;
+    border-right-width: 1px;
+}
+
+body,
+.explanation,
+.formfield,
+.tablerow td,
+.nav,
+.captcha SPAN,
+input,
+select,
+textarea {
+    color: 1a1a1a;
+}
+
+nav .menuButton a {
+    color: #b5b5b5;
+}
+
+select {
+    color: #666666;
+}
+
+.rtcontentcol,
+DIV.LoadingDivHeader,
+.Heading2,
+.productPriceInList,
+.productPriceInGrid,
+.productGridCurrency,
+.productListCurrency,
+a.AccountLinks,
+a.AccountLinks:hover,
+.LoginMaster .SmallLink,
+.SaveForLaterCartListHead,
+.FormLabel.ShoppingCartTitle {
+    color: #1a1a1a;
+}
+
+.productGridPriceFrom,
+.productListPriceFrom {
+    color: #b8b3e4;
+}
+
+.emphasis {
+    color: #5676a5;
+}
+
+.formbox {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #c6ccd9;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #c6ccd9;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #c6ccd9;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #c6ccd9;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.formprompt {
+    color: #2d3d55;
+}
+
+input,
+select,
+textarea {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #d0d0d0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #d0d0d0;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #d0d0d0;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #d0d0d0;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: 0;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: 0;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 0;
+}
+
+.formtitle,
+.btnSelected,
+.smallprompt,
+.CheckoutHead,
+.PriceListHead,
+.PagerCurrentPageStyle,
+#fullpage ul .links a,
+.nav a,
+.nav a:visited,
+div.XmpImageDropDownList li,
+div.XmpImageDropDownList a.toggler,
+div.dropDownCurrencies li,
+div.dropDownCurrencies a.toggler,
+div.dropDownCurrencies li,
+div.dropDownCurrencies a.toggler,
+div.XmpImageDropDownList li:hover,
+div.XmpImageDropDownList a.toggler:hover,
+div.dropDownCurrencies li:hover,
+div.dropDownCurrencies a.toggler:hover,
+div.dropDownCurrencies li:hover,
+div.dropDownCurrencies a.toggler:hover {
+    color: #1a1a1a;
+}
+
+.menuButton.selected a,
+nav .menuButton:hover a,
+.userWelcome span {
+    color: #b5b5b5;
+}
+
+a.XmpImageButton_style1_link,
+.XmpImageButton_Items_AssignAll,
+a.XmpImageButton_ThemeColorLink,
+a.XmpImageButton_ThemeColorLink:link {
+    color: #333333 !important;
+}
+
+.leftbar,
+.searchprompt,
+.WizStepSel,
+.addressItemBody,
+.addressItemHead .tooltip,
+.MerchantAddressBody,
+.AddressBody,
+.tablehead td,
+.FilePick,
+.PageTitle,
+.PriceListItemAlt,
+.CheckoutItem,
+.CartListItem,
+.CartListItemAlt,
+.PriceListItem,
+.CheckoutItemAlt {
+    color: #000000;
+}
+
+.Error,
+.formpromptred,
+.LockedUserTitle {
+    color: #ff0000;
+}
+
+.SinglePrice {
+    color: #cc0000;
+}
+
+.WizStep,
+.SecondaryCurrencyLabel {
+    color: Gray;
+}
+
+.disabledElement,
+.PagerDisabledHyperlinkStyle {
+    color: #cdcdcd;
+}
+
+.Tooltip {
+    color: #000066;
+}
+
+.btnUnselected,
+a:hover {
+    color: #000088;
+}
+
+.CouponInfoMessage {
+    color: Green;
+}
+
+.THFontText,
+.RTHFontText {
+    color: darkblue;
+}
+
+.divOptionRepeater.selected,
+.trOptionRepeater.hover {
+    color: #87a01f;
+}
+
+.FormButton {
+    color: #38789c;
+}
+
+.RejectText {
+    color: #c0504d !important;
+}
+
+.PendingText {
+    color: #1a1a1a;
+}
+
+.ApprovedText {
+    color: #38789c;
+}
+
+.ModifiedText {
+    color: #1a1a1a;
+}
+
+.MailingItemsTablesSubTitle {
+    color: #1f497d;
+}
+
+.SinglePriceCurrency {
+    color: #4d4d4d;
+}
+
+.WizardStepHeadingCurrent {
+    color: #292929;
+}
+
+.formbox,
+.LockedUserDiv,
+.LoginPasswordExpired,
+.LockedUser {
+    background-color: #f1f1f1;
+}
+
+.LoginMaster a.signin {
+    display: none !important;
+}
+
+.WizardButtonsContainer .next,
+.WizardButtonsContainer .finish,
+.WizardButtonsContainer .saveForLater {
+    float: right;
+    margin-right: 12px;
+}
+
+.WizardButtonsContainer .cancel {
+    display: none;
+}
+
+.checkoutFinalBack,
+.productDetailsBack {
+    float: left;
+}
+
+.checkoutFinalCheckout,
+.productDetailsContinue,
+.checkoutFinalNext {
+    float: right;
+    margin-right: 12px;
+}
+
+.ThemedPageMaster #bodyarea::before {
+    left: 0;
+}
+
+.ThemedPageMaster #bodyarea::after {
+    right: 0;
+}
+
+#navArea {
+    border-right-color: #999999;
+    border-right-style: solid;
+    border-right-width: 0px;
+    float: left;
+}
+
+.propertyList {}
+
+.propertyLink {
+    color: #394a6a !important;
+}
+
+.propertyLink:visited {
+    color: #394a6a !important;
+}
+
+.propertyLink:hover {
+    color: #000088 !important;
+}
+
+.WizardStepsNavControl {
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    width: 712px;
+}
+
+#productDetailsContainer .WizardStepsNavControl {
+    margin-bottom: 0;
+}
+
+.XmpTooltipPopup TR {
+    vertical-align: top;
+}
+
+.XmpTooltipPopup TD {
+    padding-bottom: 3px !important;
+    padding-left: 5px !important;
+    padding-right: 10px !important;
+    padding-top: 3px !important;
+}
+
+.FieldOptionItem.selected.FOGrid .optionIcon {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #292929;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #292929;
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-right-color: #2985cd;
+    border-right-style: solid;
+    border-right-width: 3px;
+    border-top-color: #292929;
+    border-top-style: solid;
+    border-top-width: 3px;
+}
+
+.FieldOptionItem:hover {
+    color: #87a01f;
+}
+
+.XmpImageButton {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+    height: 21px;
+    line-height: 21px;
+    margin-right: 5px;
+    padding-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+.XmpieTransparentButton {
+    background-color: transparent;
+}
+
+.XmpieThemeColorButton,
+.XmpieDisabledButton,
+.XmpieCancelButton,
+.XmpieRejectButton,
+.XmpieAcceptButton,
+.XmpieApproveButton,
+.XmpieModifyButton {
+    color: #ffffff !important;
+    text-decoration-color: -moz-use-text-color !important;
+    text-decoration-line: none !important;
+    text-decoration-style: solid !important;
+}
+
+.XmpieThemeColorButton {
+    background-color: #cc0000;
+    background-image: -moz-linear-gradient(center top, #cc0000 50%, #cc0000 50%);
+}
+
+.XmpieThemeColorButton:hover,
+.XmpieThemeColorButton.Hover {
+    background-color: #f1f1f1;
+    background-image: -moz-linear-gradient(center top, 1a1a1a 50%, 1a1a1a 50%);
+}
+
+.XmpieThemeColorButton:active {
+    background-color: #1a1a1a;
+    background-image: -moz-linear-gradient(center top, #1a1a1a 50%, #1a1a1a 50%);
+}
+
+.XmpieThemeColorButton[disabled],
+.XmpieRejectButton[disabled],
+.XmpieApproveButton[disabled],
+.XmpieModifyButton[disabled],
+.XmpieBackLink[disabled] {
+    background-color: #afafaf !important;
+    background-image: -moz-linear-gradient(center top, #afafaf 50%, #999999 50%) !important;
+}
+
+.XmpImageButton.HideDisabled[disabled],
+.XmpieHiddenButton {
+    display: none;
+}
+
+.XmpieClearButton {
+    background-color: transparent;
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 21px;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    text-decoration-color: -moz-use-text-color !important;
+    text-decoration-line: underline !important;
+    text-decoration-style: solid !important;
+}
+
+a.XmpieBackLink {
+    background-color: transparent;
+    color: #999999;
+    font-size: 11px;
+    font-weight: 500;
+    margin-left: 25px;
+    text-decoration-color: -moz-use-text-color !important;
+    text-decoration-line: none !important;
+    text-decoration-style: solid !important;
+}
+
+.XmpImageButton.TallButton {
+    height: 32px;
+    line-height: 32px;
+}
+
+.XmpieApproveButton {
+    background-color: #76a43b;
+    background-image: -moz-linear-gradient(center top, #76a43b 50%, #598839 50%);
+}
+
+.XmpieApproveButton:hover {
+    background-color: #548036;
+    background-image: -moz-linear-gradient(center top, rgba(84, 128, 54, 0.7) 50%, rgba(64, 98, 40, 0.7) 50%);
+}
+
+.XmpieApproveButton:active {
+    background-color: #548036;
+    background-image: -moz-linear-gradient(center top, #548036 50%, #406228 50%);
+}
+
+.XmpieRejectButton {
+    background-color: #f00000;
+    background-image: -moz-linear-gradient(center top, #f00000 50%, #cc0000 50%);
+}
+
+.XmpieRejectButton:hover {
+    background-color: #a30000;
+    background-image: -moz-linear-gradient(center top, rgba(163, 0, 0, 0.7) 50%, rgba(128, 0, 0, 0.7) 50%);
+}
+
+.XmpieRejectButton:active {
+    background-color: #a30000;
+    background-image: -moz-linear-gradient(center top, #a30000 50%, #800000 50%);
+}
+
+.XmpieModifyButton {
+    background-color: #53b4cf;
+    background-image: -moz-linear-gradient(center top, #53b4cf 50%, #2799b8 50%);
+}
+
+.XmpieModifyButton:hover {
+    background-color: #358ea6;
+    background-image: -moz-linear-gradient(center top, #358ea6 50%, #1f7b94 50%);
+}
+
+.XmpieModifyButton:active {
+    background-color: #2f849c;
+    background-image: -moz-linear-gradient(center top, #2f849c 50%, #1b738b 50%);
+}
+
+.XmpieClearButton_LinkStyle,
+.options {
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 21px;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    text-decoration-color: -moz-use-text-color !important;
+    text-decoration-line: underline !important;
+    text-decoration-style: solid !important;
+}
+
+.XmpieDisabledButton,
+.XmpieCancelButton {
+    background-color: #afafaf;
+    background-image: -moz-linear-gradient(center top, #afafaf 50%, #999999 50%);
+}
+
+.footnotes,
+#tdProductPricing .rgRow,
+#tdProductPricing .rgAltRow {
+    font-size: 10px;
+}
+
+#detailsTable.orderDetailsPage hr {
+    display: none;
+}
+
+.WizardProgressBarContainer {
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    position: relative;
+    width: 100%;
+}
+
+.WizardProgressBarContainer TD {}
+
+.WizardProgressStep {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    position: relative;
+    width: 20%;
+}
+
+.WizardProgressStep table {
+    width: 100%;
+}
+
+.WizardProgressStepInnerTable {
+    border-spacing: 0;
+    width: 100%;
+}
+
+.WizStepTR,
+.WizStepTRSel {
+    color: White;
+    float: left;
+    height: 37px;
+    line-height: 37px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.WizStepTR[stepStatus="waiting"],
+.WizStepTRSel[stepStatus="waiting"] {
+    background-image: url("WizardNavigation/waiting_background.png");
+    color: #666666;
+}
+
+.WizStepTR[stepStatus="done"],
+.WizStepTRSel[stepStatus="done"] {
+    background-image: url("WizardNavigation/done_background.png");
+    color: WHITE;
+}
+
+.WizStepTR[stepStatus="active"],
+.WizStepTRSel[stepStatus="active"] {
+    background-image: url("WizardNavigation/active_background.png");
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.WizStepTR[stepStatus="waiting"] .WizStep,
+.WizStepTRSel[stepStatus="waiting"] .WizStepSel {
+    color: #666666;
+}
+
+.WizStepTR[stepStatus="done"] .WizStep,
+.WizStepTRSel[stepStatus="done"] .WizStepSel {
+    color: WHITE;
+}
+
+.WizStepTR[stepStatus="active"] .WizStep,
+.WizStepTRSel[stepStatus="active"] .WizStepSel {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.WizStepTR .leftElement,
+.WizStepTRSel .leftElement {
+    height: 37px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 10px;
+}
+
+.WizStepTR[stepStatus="waiting"] .leftElement {
+    background-image: url("WizardNavigation/waiting_middle_left.png");
+}
+
+.WizStepTR[stepStatus="done"] .leftElement {
+    background-image: url("WizardNavigation/done_middle_left.png");
+}
+
+.WizStepTRSel[stepStatus="active"] .leftElement {
+    background-image: url("WizardNavigation/active_middle_left.png");
+}
+
+.WizStepTR .rightElement,
+.WizStepTRSel .rightElement {
+    height: 37px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+}
+
+.WizStepTR[stepStatus="waiting"] .rightElement {
+    background-image: url("WizardNavigation/waiting_middle_right.png");
+}
+
+.WizStepTR[stepStatus="done"] .rightElement {
+    background-image: url("WizardNavigation/done_middle_right.png");
+}
+
+.WizStepTRSel[stepStatus="active"] .rightElement {
+    background-image: url("WizardNavigation/active_middle_right.png");
+}
+
+.WizStepFirstStep.leftElement[stepStatus="waiting"] {
+    background-image: url("WizardNavigation/waiting_first_left.png");
+}
+
+.WizStepFirstStep[stepStatus="done"] .leftElement {
+    background-image: url("WizardNavigation/done_first_left.png");
+}
+
+.WizStepFirstStep[stepStatus="active"] .leftElement {
+    background-image: url("WizardNavigation/active_first_left.png");
+}
+
+.WizStepLastStep[stepStatus="waiting"] .rightElement {
+    background-image: url("WizardNavigation/waiting_last_right.png");
+}
+
+.WizStepLastStep[stepStatus="done"] .rightElement {
+    background-image: url("WizardNavigation/done_last_right.png");
+}
+
+.WizStepLastStep[stepStatus="active"] .rightElement {
+    background-image: url("WizardNavigation/active_last_right.png");
+}
+
+.WizStep {}
+
+.WizardStepImageURL {
+    display: none;
+}
+
+#ctl00_cphMainContent_ShippingAddress_lnkAddAddress {
+    display: inline;
+    color: blue;
+}
+
+#ctl00_cphMainContent_ShippingAddress_lnkEditAddress {
+    display: block;
+}
+
+.ManageAddressDesc {
+    display: block;
+}
+
+.ManageAddressLink {
+    display: block;
+}
