@@ -2443,7 +2443,7 @@ ul.CheckOutPage li.cartSummary div.totals tr {
 .productSearchBox input[type="submit"] {
     background-color: black;
     background-image: url("/uStore/Images/magnifying_glass_high.png");
-    background-position: 4px 4px;
+    background-position: 5px 4px;
     background-repeat: no-repeat;
     border-bottom-width: 0;
     border-left-width: 0;
@@ -3717,14 +3717,14 @@ a.SmallLink {
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: auto auto;
-    height: 54px;
+    height: 0px;
     position: relative;
 }
 
 .ThemedPagedFullWidthMaster #searcharea {
     width: 959px;
     background-color: white;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .subtitleProductName,
@@ -3769,11 +3769,14 @@ a.SmallLink {
     margin-top: 0;
     position: absolute;
     right: 20px;
+    height: 23px;
 }
 
 .ThemedPageMaster .productSearchBox {
     bottom: 35px;
     border-style: solid;
+    opacity: .3;
+    
 }
 
 .productSearchBox > div {
@@ -4018,7 +4021,7 @@ a {
     padding-left: 0;
     padding-right: 0;
     padding-top: 12px;
-    width: 959px;
+    width: 100%;
 }
 
 .mainAreaFooterFullWidth table {
@@ -6525,16 +6528,17 @@ div.proofLink a {
 
 header {
     height: 146px;
-    background-color: black;
-    margin-top: 4px;
+    background-color: white;
+    margin-top: 0px;
     margin-bottom: -1px;
     opacity: 0.81;
 }
 
 nav {
-    float: left;
+    float: right;
     margin-left: 0;
-    margin-top: -21px;
+    margin-top: 0px;
+    margin-right:-3px;
 }
 
 header ul li {
@@ -6802,10 +6806,10 @@ div.XmpImageDropDownList:hover {
 
 .ThemedPageMaster #searcharea {
     background-image: url(color_bar.png) no-repeat 0 0;
-    opacity: 0.7;
+    opacity: 1;
     float: right;
     height: auto;
-    top: 65px;
+    top: -28px;
     width: 786px;
     z-index: 2;
 }
@@ -6906,7 +6910,7 @@ textarea {
 }
 
 nav .menuButton a {
-    color: #b5b5b5;
+    color: black;
 }
 
 select {
@@ -7043,7 +7047,7 @@ div.dropDownCurrencies a.toggler:hover {
 .menuButton.selected a,
 nav .menuButton:hover a,
 .userWelcome span {
-    color: #b5b5b5;
+    color: black;
 }
 
 a.XmpImageButton_style1_link,
